@@ -1,0 +1,19 @@
+.con {
+  width: 100%;
+}
+.tb-in-events {
+  width: 100%;
+  display: flex;
+  list-style: none;
+}
+.ev-tabs {
+  flex: 1;
+  text-align: center;
+}
+.ila {
+  padding: 6px;
+  display: block;
+}
+.active {
+  background-color: #202327;
+}

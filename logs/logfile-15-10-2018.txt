@@ -1,0 +1,45 @@
+21:37:44:=>Logging in with google id...
+21:37:44:=> logged in successfully with token #GOOGLEUSER::=>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1Yjk5NDEwODQxOWMzNTI1NjQzNWMxODMiLCJpYXQiOjE1Mzk2MTk2NjQsImV4cCI6MTUzOTcwNjA2NH0.h8Lor7Xon2oyb_fA2DEb0y8QxyHBWMPAlS_m2FfVTTY
+21:37:44:=>/profile
+21:37:44:=>profile Data fetched for 5b994108419c35256435c183
+21:37:48:=>Telecasted userinfo for 5bbb7ca4f379c72850d6562a
+21:37:58:=>Telecasted userinfo for 5bbb7ca4f379c72850d6562a
+21:38:02:=>Telecasted userinfo for 5bbb7ca4f379c72850d6562a
+21:38:03:=>INTERNAL SERVER ERROR, STATUS CODE: 500
+ReferenceError: mongoose is not defined
+    at getFollowUser (E:\football_geek\football\server\controllers\controller.general.js:135:32)
+    at getSecret (E:\football_geek\football\node_modules\jsonwebtoken\verify.js:76:14)
+    at Object.module.exports [as verify] (E:\football_geek\football\node_modules\jsonwebtoken\verify.js:80:10)
+    at jwtTokenByPasser (E:\football_geek\football\server\middlewares\middle.container.js:11:17)
+    at Layer.handle [as handle_request] (E:\football_geek\football\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\football_geek\football\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (E:\football_geek\football\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (E:\football_geek\football\node_modules\express\lib\router\layer.js:95:5)
+    at E:\football_geek\football\node_modules\jsonwebtoken\verify.js:196:12
+    at E:\football_geek\football\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (E:\football_geek\football\node_modules\express\lib\router\index.js:335:12)
+    at Function.handle (E:\football_geek\football\node_modules\express\lib\router\index.js:174:3)
+    at next (E:\football_geek\football\node_modules\express\lib\router\index.js:275:10)
+    at router (E:\football_geek\football\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (E:\football_geek\football\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (E:\football_geek\football\node_modules\express\lib\router\index.js:317:13)
+    at E:\football_geek\football\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (E:\football_geek\football\node_modules\express\lib\router\index.js:335:12)
+    at next (E:\football_geek\football\node_modules\express\lib\router\index.js:275:10)
+    at Layer.handle [as handle_request] (E:\football_geek\football\node_modules\express\lib\router\layer.js:95:5)
+    at jwt.verify (E:\football_geek\football\server\middlewares\middle.container.js:20:21)
+    at next (E:\football_geek\football\node_modules\express\lib\router\route.js:137:13)
+21:38:53:=>Telecasted userinfo for 5bbb7ca4f379c72850d6562a
+21:38:55:=>/profile
+21:38:55:=>profile Data fetched for 5b994108419c35256435c183
+22:10:21:=>/profile
+22:10:21:=>profile Data fetched for 5b994108419c35256435c183
+22:16:25:=>/whoseprofile/rahulpunase
+22:16:25:=>DATA SENT TO CLIENT SUCCESSFULLY
+22:17:35:=>Telecasted userinfo for 5bbb7c51f379c72850d65627
+22:17:39:=>Telecasted userinfo for 5bbb7c51f379c72850d65627
+22:17:40:=>Telecasted userinfo for 5bbb7c51f379c72850d65627
+22:17:44:=>Telecasted userinfo for 5bbb7c51f379c72850d65627
+22:18:02:=>Telecasted userinfo for 5bbb7c51f379c72850d65627
+22:18:22:=>Telecasted userinfo for 5bbb7c51f379c72850d65627
+22:18:26:=>Telecasted userinfo for 5bbb7c51f379c72850d65627

@@ -1,0 +1,29 @@
+21:18:36:=>Logging in with google id...
+21:18:36:=> logged in successfully with token #GOOGLEUSER::=>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1YjlhNzI2MDllNDdiNzBmODg3OGY1MWUiLCJpYXQiOjE1Mzc4MDQxMTYsImV4cCI6MTUzNzg5MDUxNn0.9Y-3Cub8wNCJXF2TDy-vO7dHZKuI460MUoDkwVTLYhk
+21:18:36:=>/profile
+21:18:36:=>profile Data fetched for 5b9a72609e47b70f8878f51e
+21:23:13:=>/profile
+21:23:13:=>profile Data fetched for 5b9a72609e47b70f8878f51e
+21:27:59:=>Telecasted userinfo for 5b9a72609e47b70f8878f51e
+21:32:36:=>abhishek12 logged in successfully with token::=>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1YjlhOTlmMWM3NjY1MTE4MWNjODBkYTgiLCJpYXQiOjE1Mzc4MDQ5NTYsImV4cCI6MTUzNzg5MTM1Nn0.c_MZgkB4yR8bxPmCukGC0eRms0SZtV4D2aJxTMhRVqw
+21:32:37:=>/profile
+21:32:37:=>profile Data fetched for 5b9a99f1c76651181cc80da8
+21:33:50:=>/whoseprofile/abhishek12
+21:33:50:=>DATA SENT TO CLIENT SUCCESSFULLY
+21:43:44:=>/whoseprofile/abhishek12
+21:43:44:=>DATA SENT TO CLIENT SUCCESSFULLY
+21:44:00:=>/saveeditedwall
+21:44:00:=>/profile
+21:44:00:=>profile Data fetched for 5b9a99f1c76651181cc80da8
+21:58:53:=>/profile
+21:58:53:=>profile Data fetched for 5b9a99f1c76651181cc80da8
+21:59:07:=>/profile
+21:59:07:=>profile Data fetched for 5b9a99f1c76651181cc80da8
+22:21:02:=>/profile
+22:21:02:=>profile Data fetched for 5b9a99f1c76651181cc80da8
+22:22:32:=>/profile
+22:22:32:=>profile Data fetched for 5b9a99f1c76651181cc80da8
+22:22:48:=>/profile
+22:22:48:=>profile Data fetched for 5b9a99f1c76651181cc80da8
+22:26:54:=>/profile
+22:26:54:=>profile Data fetched for 5b9a99f1c76651181cc80da8

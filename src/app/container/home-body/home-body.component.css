@@ -1,0 +1,80 @@
+.add-height {
+  height: 100px;
+  background-color: aqua;
+}
+.tab-content > .row > .tab-pane {
+  display: none;
+}
+
+.home_tabs > li {
+  padding: 4px;
+}
+.show {
+  display: block !important;
+}
+.fixOnSc {
+  width: 255px !important;
+  position: fixed !important;
+}
+/* --------------- Responsive Fixes --------------- */
+/* small device */
+@media (max-width: 767px) {
+  .device-big {
+    display: none;
+  }
+  .device-small {
+    display: block;
+  }
+}
+/* big device */
+@media only screen and (min-width: 768px) {
+  .device-big,
+  .tab-content > .tab-pane {
+    display: block;
+  }
+  .device-small {
+    display: none;
+  }
+  .tab-content > .tab-pane {
+    display: block;
+  }
+  .tab-content > .row > .tab-pane {
+    display: block !important;
+  }
+}
+/* --------------- / Responsive Fixes --------------- */
+@media (min-width: 1200px) {
+  .fg-container {
+    max-width: 1200px !important;
+  }
+}
+/* Extra small devices (portrait phones, less than 576px)
+ No media query for `xs` since this is the default in Bootstrap
+
+ Small devices (landscape phones, 576px and up) */
+
+@media (max-width: 576px) {
+  .post-content {
+    flex: 1;
+  }
+  .postlist {
+    padding: 0.75rem 0.5rem;
+  }
+  .mobile_view_container {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  .onMobile{
+    display: none;
+  }
+
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 992px) {
+}
+
+@media (max-width: 1200px) {
+}

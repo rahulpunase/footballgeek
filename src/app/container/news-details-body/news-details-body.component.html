@@ -1,0 +1,78 @@
+<div #animater class="container">
+  <div class="row">
+    <div class="col-xl-2"></div>
+    <div class="col-xl-8">
+      <div class="margin"></div>
+      <div class="nd-title">
+        <div class="nd-title-span">{{singleNewsData.title}}</div>
+      </div>
+      <div class="new_big_image">
+        <img src="{{domain + singleNewsData.imagepath}}" class="img-fluid" alt="">
+      </div>
+      <div class="time_and_all">
+        <div class="time_of_new">{{singleNewsData.createdAt | date:'hh:mm a'}}</div>
+        <div class="spacing"></div>
+        <div class="date_of_new">{{singleNewsData.createdAt | date:'dd-MMMM'}}</div>
+      </div>
+      <div class="class_heading">
+        <div class="nd-heading">
+          <div class="nd-heading-span">
+            {{singleNewsData.heading}}
+          </div>
+        </div>
+      </div>
+      <div>
+        <div [innerHTML]="singleNewsData.content" id='content' #content class="all_content">
+        </div>
+      </div>
+      <div *ngIf="associatedClub.length > 0 || associatedLeague.length> 0" class="as-club-leagues">
+        <div class="fl-sugg-parent">
+          <!--Clubs repeat-->
+          <div *ngFor="let club of associatedClub" class="">
+            <a routerLink="/teams/{{club._id}}" class="team-page as-clubs">
+            <div class="sug-img">
+              <img [src]="'/assets/' + club.img_path" alt="">
+            </div>
+            <div class="sug-name">
+              {{club.name}}
+            </div>
+          </a>
+          </div>
+          <!--League repeat-->
+          <div *ngFor="let league of associatedLeague" class="as-clubs">
+            <div class="sug-img">
+              <img [src]="'/assets/' + league.img_path" alt="">
+            </div>
+            <div class="sug-name">
+              {{league.name}}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sources"></div>
+      <div *ngIf="newsToSuggest.length > 0" class="more-news">
+        <div class="upper-margin">
+          <div class="bar-heading">
+            <h1>More News</h1>
+          </div>
+          <div class="suggest-parent fl-sug-container">
+            <div class="sm-box-news card" *ngFor="let news of newsToSuggest">
+              <a class="a-box" routerLink="/news/{{news.href}}">
+                <div class="all">
+                  <div class="sm-img">
+                    <img class="img-fluid" [src]="domain + news.imagepath" alt="">
+                  </div>
+                  <div class="sug-title">
+                    <h5>{{news.title}}</h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="clear-both"></div>
+      </div>
+    </div>
+    <div class="col-xl-2"></div>
+  </div>
+</div>

@@ -1,0 +1,90 @@
+<div class="container">
+  <div class="row">
+    <div class="central_aligned">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xl-12">
+            <div class="span12">
+              <div class="space"></div>
+              <div class="space"></div>
+              <div class="span12">
+                <h1 class="text-center">Football Geek</h1>
+              </div>
+              <div class="span12 space_max">
+              </div>
+            </div>
+            <div class="span12 fg_gbl_spn_pad fg_gbl_div_style bg-dark">
+              <div class="span12">
+                <h2>Create an account</h2>
+              </div>
+              <form (submit)="registerUser()" [formGroup]="regForm">
+                <div class="form-group" [ngClass]="{'fg_has_error':(regForm.controls.name.errors && regForm.controls.name.dirty), 'fg_has_success':(!regForm.controls.name.errors)}">
+                  <label for="fullname">Full Name</label>
+                  <input name="name" formControlName="name" autocomplete="off" type="text" class="form-control" id="fullname" aria-describedby="emailHelp"
+                    placeholder="Enter Full name">
+                  <div class="help-block">
+                    <div *ngIf="regForm.controls.name.errors?.required && regForm.controls.name.dirty">Please provide your full name</div>
+                    <div
+                      *ngIf="regForm.controls.name.errors?.minlength && regForm.controls.name.dirty || regForm.controls.name.errors?.maxlength && regForm.controls.name.dirty">
+                      The length of the name must be between 5 to 30 characters
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group"
+                  [ngClass]="{'fg_has_error':(regForm.controls.username.errors && regForm.controls.username.dirty) || (!usernameFlag && regForm.controls.username.dirty), 'fg_has_success':(!regForm.controls.username.errors) && (usernameFlag)}">
+                  <label for="createusername">Create Username</label>
+                  <input (blur)="checkUsernameAvaibility()" name="username" autocomplete="off" formControlName="username" type="text" class="form-control" id="createusername"
+                    aria-describedby="emailHelp" placeholder="Create a username">
+                  <div class="help-block">
+                    <div *ngIf="regForm.controls.username.errors?.required && regForm.controls.username.dirty">Please provide a username</div>
+                    <!--<div *ngIf="usernameFlag && regForm.controls.username.dirty">Username is available</div>-->
+                    <div *ngIf="!usernameFlag && regForm.controls.username.dirty">Username is taken</div>
+                    <!--<div *ngIf="regForm.controls.username.errors?.pattern && regForm.controls.username.dirty">Not allowed</div>-->
+                    <div
+                      *ngIf="regForm.controls.username.errors?.minlength && regForm.controls.username.dirty || regForm.controls.username.errors?.maxlength && regForm.controls.username.dirty">
+                        The length of the name must be between 5 to 30 characters
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group" [ngClass]="{'fg_has_error':(regForm.controls.email.errors && regForm.controls.email.dirty) || (!emailFlag && regForm.controls.email.dirty), 'fg_has_success':(!regForm.controls.email.errors) && emailFlag}">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input (blur)="checkEmailAvaibility()" formControlName="email" name="email" autocomplete="off" type="email" class="form-control" id="exampleInputEmail1"
+                    aria-describedby="emailHelp" placeholder="Enter email">
+                  <div class="help-block">
+                    <div *ngIf="regForm.controls.email.errors?.required && regForm.controls.email.dirty">Please provide a email</div>
+                    <div *ngIf="regForm.controls.email.errors?.email && regForm.controls.email.dirty">Please provide correct email format</div>
+                    <div *ngIf="!emailFlag && regForm.controls.email.dirty">Email is already in use</div>
+                  </div>
+                </div>
+
+                <div class="form-group" [ngClass]="{'fg_has_error':(regForm.controls.password.errors && regForm.controls.password.dirty), 'fg_has_success':(!regForm.controls.password.errors)}">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input  formControlName="password" name="password" autocomplete="off" type="password" class="form-control" id="exampleInputPassword1"
+                    placeholder="Password">
+                  <div class="help-block">
+                    <div *ngIf="regForm.controls.password.errors?.required && regForm.controls.password.dirty">Please provide a password</div>
+                    <div *ngIf="regForm.controls.password.errors?.minlength && regForm.controls.password.dirty">Password should contain more than 6 characters</div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <a href="/forgot-password">Forgot Password?</a>
+                </div>
+                <div class="form-group">
+                  <div class="pull-left">
+                    <button [disabled]="!regForm.valid || !usernameFlag || !emailFlag" type="submit" class="btn btn-sm btn-success">Register</button>
+                  </div>
+                  <div class="pull-right">
+                    <a routerLink="/login" class="btn btn-primary btn-sm">Login</a>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

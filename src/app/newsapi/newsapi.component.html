@@ -1,0 +1,25 @@
+<ng-template [ngIf]="newssourses.length > 0" [ngIfElse]="nothing">
+  <h6>News around the world</h6>
+  <div class="ul-actor list-group">
+    <div *ngFor="let news of newssourses" style="text-decoration: none;" class="list-group-item list-actor">
+      <a class="api-a" onerror="this.src='/assets/img/default_newsapi.png'" target="_blank" [href]="news.url">
+        <div class="f-d">
+          <div class="carbon-image">
+            <img [src]="news.urlToImage" alt="" class="incim">
+          </div>
+          <div class="api-title">
+            <span [innerHTML]="news.title"></span>
+          </div>
+        </div>
+        <div class="ago">
+          at: <span>{{ news.publishedAt | date: 'hh:mm a' }}</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</ng-template>
+<ng-template #nothing>
+  <div class="loader">
+    <img src="/assets/img/animated_spinner.gif" alt="" class="small-loader">
+  </div>
+</ng-template>

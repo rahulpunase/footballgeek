@@ -1,0 +1,33 @@
+<ul class="list-group fg-my-list-group">
+  <div *ngFor="let new of news" class="list-group-item newslist">
+      <a style="text-decoration: none;" routerLink="/news/{{new.href}}"  >
+        <h4 class="newsheading margin">
+          {{new.title}}
+        </h4>
+        <div class="newsbody">
+          <img class="img-fluid" [lazyLoad]="domain + new.imagepath" [defaultImage]="'/assets/img/def.gif'" alt="">
+        </div>
+        <div class="newsbottom">
+          <div></div>
+          <div>
+            <span>{{new.intertedAt | date: 'dd MMMM on hh:mm a' }}</span>
+          </div>
+          <div></div>
+        </div>
+      </a>
+      <div class="news-source">
+        <div class="span p">
+          <span>
+            <strong>Source:&nbsp;</strong>
+          </span>
+          <span>
+            <a target="_blank" [href]="new.newsBy.sourceUrl">{{new.newsBy.source}}</a>
+          </span>
+        </div>
+      </div>
+  </div>
+  <li class="list-group-item newslist">
+    <!-- <iframe width="100%" height="414" src="https://www.youtube.com/embed/xqqbAaSYxqY" frameborder="0" allow="autoplay; encrypted-media"
+      allowfullscreen></iframe> -->
+  </li>
+</ul>

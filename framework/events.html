@@ -1,0 +1,101 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="fr_css/bootstrap.css" />
+  <script src="fr_js/jquery.min.js"></script>
+  <script src="fr_js/events.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-3"></div>
+      <div class="col-xl-6">
+        <form action="http://localhost:3000/events/insertevents" method="post">
+          <div class="form-group fr">
+            <label for="teamOne">Team One</label>
+            <select name="teamOne" id="teamOne" class="teamOne form-control">
+              <option value="">Select</option>
+            </select>
+          </div>
+          <div class="form-group fr">
+            <label for="teamTwo">Team Two</label>
+            <select name="teamTwo" id="teamTwo" class="teamTwo form-control">
+              <option value="">Select</option>
+            </select>
+          </div>
+          <div class="form-group fr">
+            <label for="date">Date and time</label>
+            <input class="form-control" type="datetime-local" name="matchDate">
+          </div>
+          <div class="form-group fr">
+            <label for="matchday">Match Day</label>
+            <select name="matchDay" id="matchday" class="matchday"></select>
+          </div>
+          <div class="form-group fr">
+            <label for="leagueassociated">Compition Associated With Event</label>
+            <select name="leagueAssociated" id="leagueassociated" class="leagueassociated">
+              <option value="">Select</option>
+            </select>
+          </div>
+          <div class="form-group fr">
+            <label for="iscupgametrue">Cup Game</label>
+            <input class="form-control" type="radio" id="iscupgametrue" name="isCupGame" value="true">
+            <label for="iscupgamefalse">Not a cup game</label>
+            <input class="form-control" type="radio" id="iscupgamefalse" name="isCupGame" value="false">
+          </div>
+          <div class="form-group fr">
+            <label for="leg">Leg</label>
+            <select class="form-control" name="leg" id="leg" class="leg">
+              <option value="">Select</option>
+              <option value="1">First</option>
+              <option value="2">Second</option>
+            </select>
+          </div>
+          <div class="form-group fr">
+            <label for="Round">Round</label>
+            <select class="form-control" name="round" id="Round" class="Round">
+              <option value="">Select</option>
+              <option value="32">Round of 32</option>
+              <option value="16">Round of 16</option>
+              <option value="08">Round of 08</option>
+              <option value="04">Round of 04</option>
+              <option value="02">Semi Final</option>
+              <option value="01">Final</option>
+            </select>
+          </div>
+          <div class="form-group gr">
+            <label for="teamOneScore">Team One Score</label>
+            <input type="number" class="form-control" id="teamOneScore" name="teamOneScore">
+          </div>
+          <div class="form-group gr">
+            <label for="teamTwoScore">Team Two Score</label>
+            <input type="number" class="form-control" id="teamTwoScore" name="teamTwoScore">
+          </div>
+          <div class="form-group fr">
+            <label for="isGameFinished">Game Finished</label>
+            <input class="form-control" type="radio" id="isGameFinished" name="isGameFinished" value="true">
+            <label for="isGameFinished">Game Not finished</label>
+            <input class="form-control" type="radio" id="isGameFinished" name="isGameFinished" value="false">
+          </div>
+          <div class="form-group fr">
+            <label for="isGameCancled">Game Canceled</label>
+            <input class="form-control" type="radio" id="isGameCanceled" name="isGameCanceled" value="true">
+            <label for="isGameCancled">Game not canceled</label>
+            <input class="form-control" type="radio" id="isGameCanceled" name="isGameCanceled" value="false">
+          </div>
+          <div class="form-group">
+            <button class="btn btn-primary" type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+      <div class="col-xl-3"></div>
+    </div>
+  </div>
+</body>
+
+</html>

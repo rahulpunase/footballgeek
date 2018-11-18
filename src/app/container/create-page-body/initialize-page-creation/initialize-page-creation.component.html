@@ -1,0 +1,74 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xl-12">
+      <div class="beautiful-heading">
+        <p class="main-heading">
+          <span>
+            Create a page
+          </span>
+        </p>
+        <p class="sub-heading">
+          <span>
+            Expand your connections, know people who share similar interest as you do, share your thoughts, Enjoy,
+            tease and much more
+            <strong></strong>
+          </span>
+        </p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-6 fg-mar-0-auto">
+          <div class="form-holder">
+            <div class="form-box">
+              <div class="f-heading">
+                <span>Grow your audience and fans.</span>
+              </div>
+              <div *ngIf="alreadyCreatedPages.length > 0" class="already-created-pages">
+                <div class="heading-al-pages">
+                  <span>Edit your pages</span>
+                </div>
+                <ul class="pages">
+                  <li *ngFor="let page of alreadyCreatedPages" class="page">
+                    <div class="page-com">
+                      <div class="page-name">
+                        <span class="p-n">{{ page.pageName }}</span>
+                      </div>
+                      <div class="edit-link">
+                        <a routerLink="/createpage/{{page._id}}" class="ed-link-pages btn btn-primary btn-sm">Edit</a>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <div *ngIf="!showNewPageSection" class="create-a-new-page">
+                  <div class="btn-holder">
+                    <button (click)="displayNewPageSection()" class="btn btn-sm btn-primary">Create a new page</button>
+                  </div>
+                </div>
+              </div>
+              <div *ngIf="showNewPageSection" class="showNewPageSection">
+                <form [formGroup]="cpage" class="form inp-holder" action="">
+                  <label for="pageName">Page name</label>
+                  <div class="">
+                    <input autofocus autocomplete="off" formControlName="pageName" placeholder="Create a page name"
+                      type="text" name="pageName" id="pageName" class="form-control">
+                  </div>
+                  <div class="name-help">
+                    <span>This name is not unique. It is a display name that gives your page an identity.</span>
+                  </div>
+                  <div class="soccer-ball">
+                    <i class="fa fa-soccer-ball-o"></i>
+                  </div>
+                  <div class="continue">
+                    <input (click)="createPageInitials()" [disabled]="!cpage.valid" type="submit" class="btn btn-primary btn-sm"
+                      value="Continue">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

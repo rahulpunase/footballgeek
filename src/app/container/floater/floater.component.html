@@ -1,0 +1,67 @@
+<div *ngIf="hidden" class="floater-container">
+  <div *ngIf="floaterData != undefined">
+    <div class="backwall"
+    [style.background-image]="trustedURL"
+    [style.background-size]="'cover'"
+    [style.background-position-x]="floaterData.wall_pic.wall_x + 'px'"
+    [style.background-position-y]="floaterData.wall_pic.wall_y/2 + 'px'"
+    ></div>
+    <div class="frontwall">
+      <div class="fl-av-pic">
+        <img class="fl-av-img" [src]="floaterData.profile_pic_path" alt="">
+      </div>
+      <div class="fl-fol-buttons">
+        <div class="top-margin"></div>
+        <div class="actual-but fol-or-al-fol">
+          <div *ngIf="floaterData._id !== loggedInUser._id">
+            <ng-template [ngIf]="!checkFollowerExists()" [ngIfElse] = "ifExists">
+              <button (click)="followSomeUser()" class="btn btn-sm btn-success">Follow</button>
+            </ng-template>
+            <ng-template #ifExists>
+              <button class="btn btn-sm btn-primary">Following</button>
+            </ng-template>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="name-and-bio">
+      <div class="name-block">
+        <div class="name"><strong>{{floaterData.name}}</strong></div>
+        <div class="username">@{{floaterData.username}}</div>
+      </div>
+      <div class="bio-block">
+        <div class="biocontent">
+          <span [innerHTML]="generalFunctionService.shortenString(floaterData.bio, 90, true)"></span>
+        </div>
+      </div>
+    </div>
+    <div class="info-in-all-block">
+        <div class="i-n-al-container">
+          <div class="qal">
+            <div class="lio-sp">
+              <span>Followers</span>  
+            </div>
+            <div class="num-l">
+              <span>{{floaterData.followers.length}}</span>
+            </div>
+          </div>
+          <div class="qal ce">
+            <div class="lio-sp">
+              <span>Teams</span>
+            </div>
+            <div class="ol-dp">
+
+            </div>
+          </div>
+          <div class="qal">
+            <div class="lio-sp">
+              <span>Followings</span>
+            </div>
+            <div class="num-l">
+                <span>{{floaterData.followings.length}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>

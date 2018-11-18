@@ -1,0 +1,63 @@
+<div class="post-data-handler">
+  <div *ngIf="displaymodal" class="" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Delete this post?</h5>
+          <button (click)="navigateBack()" type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div *ngIf="loading" class="fg_loader">
+            <img class="mx-auto fg_loading"  src="/assets/img/animated_spinner.gif" alt="">
+          </div>
+          <div *ngIf="postToDelete!=undefined" class="{{postToDelete._id}}">
+            <div class="post-all">
+              <div class="post-header">
+                <div class="left-side">
+                  <div class="post-pr-pic">
+                    <img class="pr-avatar img-thumbnail" src="http://localhost:3000/postuploads/abc.jpg" alt="">
+                  </div>
+                  <div class="header-content">
+                    <div class="hc_name">
+                      <div>
+                        <strong>{{postToDelete.createdBy.name}}</strong>&nbsp;&nbsp;
+                      </div>
+                      <div title="{{postToDelete.createdAt | date: 'dd-MM-yyyy'}}" class="font-rem">
+                        - {{ postToDelete.createdAt | date: 'MMMM dd'}}
+                      </div>
+                    </div>
+                    <div class="hc_username font-rem">
+                      <a routerLink="/profile/{{postToDelete.createdBy.username}}">@{{postToDelete.createdBy.username}}</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="fg-post-content">
+                <div [ngStyle]="{'font-size': (postToDelete.content.length < 50) ? 'x-large' : 'normal'}" class="post-content">
+                  <p>{{postToDelete.content}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <!-- <div *ngIf="postToDelete==undefined" class="alert alert-danger">
+              <p>No Post found</p>
+            </div> -->
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button (click)="deletePost()" [disabled]="postToDelete==undefined && nopermission" type="button" class="btn btn-primary btn-sm">Delete</button>
+          <button (click)="navigateBack()" type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="displaywarning" class="alert alert-danger">
+      {{message}}
+  </div>
+</div>
+<script>
+  console.log("There");
+</script>

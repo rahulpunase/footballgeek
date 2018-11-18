@@ -1,0 +1,235 @@
+21:22:39:=>Logging in with google id...
+21:22:39:=> logged in successfully with token #GOOGLEUSER::=>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1YjlhNzI2MDllNDdiNzBmODg3OGY1MWUiLCJpYXQiOjE1Mzg2NjgzNTksImV4cCI6MTUzODc1NDc1OX0.1YGfyRczM4ZjVGW8qT0eaiOLWbQjVC_XAFXbSi2d5hI
+21:22:39:=>/profile
+21:22:39:=>profile Data fetched for 5b9a72609e47b70f8878f51e
+21:26:04:=>/profile
+21:26:04:=>profile Data fetched for 5b9a72609e47b70f8878f51e
+21:30:18:=>/profile
+21:30:18:=>profile Data fetched for 5b9a72609e47b70f8878f51e
+21:30:53:=>Telecasted userinfo for 5bb1151879eee335d409e910
+21:41:20:=>/profile
+21:41:20:=>profile Data fetched for 5b9a72609e47b70f8878f51e
+21:42:15:=>/profile
+21:42:15:=>profile Data fetched for 5b9a72609e47b70f8878f51e
+21:42:51:=>/profile
+21:42:51:=>profile Data fetched for 5b9a72609e47b70f8878f51e
+21:44:34:=>/profile
+21:44:34:=>profile Data fetched for 5b9a72609e47b70f8878f51e
+21:45:49:=>/profile
+21:45:49:=>profile Data fetched for 5b9a72609e47b70f8878f51e
+21:46:23:=>/profile
+21:46:23:=>profile Data fetched for 5b9a72609e47b70f8878f51e
+21:49:23:=>/profile
+21:49:23:=>profile Data fetched for 5b9a72609e47b70f8878f51e
+22:0:01:=>/profile
+22:0:01:=>profile Data fetched for 5b9a72609e47b70f8878f51e
+22:2:27:=>/profile
+22:2:27:=>profile Data fetched for 5b9a72609e47b70f8878f51e
+22:5:09:=>/profile
+22:5:09:=>profile Data fetched for 5b9a72609e47b70f8878f51e
+22:8:20:=>/profile
+22:8:20:=>profile Data fetched for 5b9a72609e47b70f8878f51e
+22:10:06:=>/profile
+22:10:06:=>profile Data fetched for 5b9a72609e47b70f8878f51e
+22:10:16:=>Telecasted userinfo for 5b9a99f1c76651181cc80da8
+22:14:16:=>/profile
+22:14:16:=>profile Data fetched for 5b9a72609e47b70f8878f51e
+22:16:26:=>/profile
+22:16:26:=>profile Data fetched for 5b9a72609e47b70f8878f51e
+22:40:23:=>/profile
+22:40:23:=>profile Data fetched for 5b9a72609e47b70f8878f51e
+22:50:31:=>/profile
+22:50:31:=>profile Data fetched for 5b9a72609e47b70f8878f51e
+22:50:42:=>/profile
+22:50:42:=>profile Data fetched for 5b9a72609e47b70f8878f51e
+22:55:19:=>/profile
+22:55:19:=>profile Data fetched for 5b9a72609e47b70f8878f51e
+22:55:43:=>/profile
+22:55:43:=>profile Data fetched for 5b9a72609e47b70f8878f51e
+23:13:54:=>/profile
+23:13:54:=>profile Data fetched for 5b9a72609e47b70f8878f51e
+23:15:24:=>/profile
+23:15:24:=>profile Data fetched for 5b9a72609e47b70f8878f51e
+23:15:49:=>/profile
+23:15:49:=>profile Data fetched for 5b9a72609e47b70f8878f51e
+23:17:05:=>/profile
+23:17:05:=>profile Data fetched for 5b9a72609e47b70f8878f51e
+23:19:58:=>/profile
+23:19:58:=>profile Data fetched for 5b9a72609e47b70f8878f51e
+23:20:15:=>/profile
+23:20:15:=>profile Data fetched for 5b9a72609e47b70f8878f51e
+23:28:07:=>/profile
+23:28:07:=>profile Data fetched for 5b9a72609e47b70f8878f51e
+23:29:44:=>/profile
+23:29:44:=>profile Data fetched for 5b9a72609e47b70f8878f51e
+23:31:04:=>/profile
+23:31:04:=>profile Data fetched for 5b9a72609e47b70f8878f51e
+23:32:55:=>INTERNAL SERVER ERROR, STATUS CODE: 500
+    at new ObjectID (E:\football_geek\football\node_modules\mongodb-core\node_modules\bson\lib\bson\objectid.js:57:11)
+    at router.post (E:\football_geek\football\server\routes\general.js:462:27)
+    at Layer.handle [as handle_request] (E:\football_geek\football\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\football_geek\football\node_modules\express\lib\router\route.js:137:13)
+Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+    at ObjectID [as ObjectId] (E:\football_geek\football\node_modules\mongodb-core\node_modules\bson\lib\bson\objectid.js:38:43)
+    at Route.dispatch (E:\football_geek\football\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (E:\football_geek\football\node_modules\express\lib\router\layer.js:95:5)
+    at E:\football_geek\football\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (E:\football_geek\football\node_modules\express\lib\router\index.js:335:12)
+    at next (E:\football_geek\football\node_modules\express\lib\router\index.js:275:10)
+    at jwt.verify (E:\football_geek\football\server\routes\general.js:30:9)
+    at Object.module.exports [as verify] (E:\football_geek\football\node_modules\jsonwebtoken\verify.js:80:10)
+    at Layer.handle [as handle_request] (E:\football_geek\football\node_modules\express\lib\router\layer.js:95:5)
+    at getSecret (E:\football_geek\football\node_modules\jsonwebtoken\verify.js:76:14)
+    at Function.process_params (E:\football_geek\football\node_modules\express\lib\router\index.js:335:12)
+    at next (E:\football_geek\football\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (E:\football_geek\football\node_modules\express\lib\router\index.js:174:3)
+    at router (E:\football_geek\football\node_modules\express\lib\router\index.js:47:12)
+    at router.use (E:\football_geek\football\server\routes\general.js:21:9)
+    at E:\football_geek\football\node_modules\jsonwebtoken\verify.js:196:12
+    at E:\football_geek\football\node_modules\express\lib\router\index.js:284:7
+    at trim_prefix (E:\football_geek\football\node_modules\express\lib\router\index.js:317:13)
+23:33:07:=>INTERNAL SERVER ERROR, STATUS CODE: 500
+    at ObjectID [as ObjectId] (E:\football_geek\football\node_modules\mongodb-core\node_modules\bson\lib\bson\objectid.js:38:43)
+    at router.post (E:\football_geek\football\server\routes\general.js:462:27)
+    at Layer.handle [as handle_request] (E:\football_geek\football\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\football_geek\football\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (E:\football_geek\football\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (E:\football_geek\football\node_modules\express\lib\router\layer.js:95:5)
+    at E:\football_geek\football\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (E:\football_geek\football\node_modules\express\lib\router\index.js:335:12)
+    at next (E:\football_geek\football\node_modules\express\lib\router\index.js:275:10)
+    at jwt.verify (E:\football_geek\football\server\routes\general.js:30:9)
+    at E:\football_geek\football\node_modules\jsonwebtoken\verify.js:196:12
+    at getSecret (E:\football_geek\football\node_modules\jsonwebtoken\verify.js:76:14)
+    at Object.module.exports [as verify] (E:\football_geek\football\node_modules\jsonwebtoken\verify.js:80:10)
+    at router.use (E:\football_geek\football\server\routes\general.js:21:9)
+    at Layer.handle [as handle_request] (E:\football_geek\football\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (E:\football_geek\football\node_modules\express\lib\router\index.js:317:13)
+    at E:\football_geek\football\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (E:\football_geek\football\node_modules\express\lib\router\index.js:335:12)
+    at next (E:\football_geek\football\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (E:\football_geek\football\node_modules\express\lib\router\index.js:174:3)
+    at router (E:\football_geek\football\node_modules\express\lib\router\index.js:47:12)
+    at new ObjectID (E:\football_geek\football\node_modules\mongodb-core\node_modules\bson\lib\bson\objectid.js:57:11)
+Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+23:33:08:=>INTERNAL SERVER ERROR, STATUS CODE: 500
+Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+    at router.post (E:\football_geek\football\server\routes\general.js:462:27)
+    at ObjectID [as ObjectId] (E:\football_geek\football\node_modules\mongodb-core\node_modules\bson\lib\bson\objectid.js:38:43)
+    at Layer.handle [as handle_request] (E:\football_geek\football\node_modules\express\lib\router\layer.js:95:5)
+    at new ObjectID (E:\football_geek\football\node_modules\mongodb-core\node_modules\bson\lib\bson\objectid.js:57:11)
+    at Layer.handle [as handle_request] (E:\football_geek\football\node_modules\express\lib\router\layer.js:95:5)
+    at Route.dispatch (E:\football_geek\football\node_modules\express\lib\router\route.js:112:3)
+    at Function.process_params (E:\football_geek\football\node_modules\express\lib\router\index.js:335:12)
+    at next (E:\football_geek\football\node_modules\express\lib\router\route.js:137:13)
+    at jwt.verify (E:\football_geek\football\server\routes\general.js:30:9)
+    at getSecret (E:\football_geek\football\node_modules\jsonwebtoken\verify.js:76:14)
+    at router.use (E:\football_geek\football\server\routes\general.js:21:9)
+    at E:\football_geek\football\node_modules\jsonwebtoken\verify.js:196:12
+    at Object.module.exports [as verify] (E:\football_geek\football\node_modules\jsonwebtoken\verify.js:80:10)
+    at Layer.handle [as handle_request] (E:\football_geek\football\node_modules\express\lib\router\layer.js:95:5)
+    at E:\football_geek\football\node_modules\express\lib\router\index.js:284:7
+    at trim_prefix (E:\football_geek\football\node_modules\express\lib\router\index.js:317:13)
+    at next (E:\football_geek\football\node_modules\express\lib\router\index.js:275:10)
+    at next (E:\football_geek\football\node_modules\express\lib\router\index.js:275:10)
+    at E:\football_geek\football\node_modules\express\lib\router\index.js:281:22
+    at Function.handle (E:\football_geek\football\node_modules\express\lib\router\index.js:174:3)
+    at router (E:\football_geek\football\node_modules\express\lib\router\index.js:47:12)
+    at Function.process_params (E:\football_geek\football\node_modules\express\lib\router\index.js:335:12)
+23:34:26:=>/profile
+23:34:26:=>profile Data fetched for 5b9a72609e47b70f8878f51e
+23:34:31:=>/whoseprofile/abhishek12
+23:34:31:=>DATA SENT TO CLIENT SUCCESSFULLY
+23:39:14:=>/profile
+23:39:14:=>/whoseprofile/abhishek12
+23:39:14:=>DATA SENT TO CLIENT SUCCESSFULLY
+23:39:14:=>profile Data fetched for 5b9a72609e47b70f8878f51e
+23:42:01:=>/profile
+23:42:01:=>profile Data fetched for 5b9a72609e47b70f8878f51e
+23:43:52:=>/profile
+23:43:52:=>profile Data fetched for 5b9a72609e47b70f8878f51e
+23:44:40:=>/profile
+23:44:40:=>profile Data fetched for 5b9a72609e47b70f8878f51e
+23:46:33:=>/profile
+23:46:33:=>profile Data fetched for 5b9a72609e47b70f8878f51e
+23:47:38:=>/profile
+23:47:38:=>profile Data fetched for 5b9a72609e47b70f8878f51e
+23:48:38:=>INTERNAL SERVER ERROR, STATUS CODE: 500
+    at new ObjectID (E:\football_geek\football\node_modules\mongodb-core\node_modules\bson\lib\bson\objectid.js:57:11)
+    at router.post (E:\football_geek\football\server\routes\general.js:462:27)
+    at ObjectID [as ObjectId] (E:\football_geek\football\node_modules\mongodb-core\node_modules\bson\lib\bson\objectid.js:38:43)
+    at Layer.handle [as handle_request] (E:\football_geek\football\node_modules\express\lib\router\layer.js:95:5)
+    at Route.dispatch (E:\football_geek\football\node_modules\express\lib\router\route.js:112:3)
+Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+    at Layer.handle [as handle_request] (E:\football_geek\football\node_modules\express\lib\router\layer.js:95:5)
+    at E:\football_geek\football\node_modules\express\lib\router\index.js:281:22
+    at next (E:\football_geek\football\node_modules\express\lib\router\route.js:137:13)
+    at Function.process_params (E:\football_geek\football\node_modules\express\lib\router\index.js:335:12)
+    at E:\football_geek\football\node_modules\jsonwebtoken\verify.js:196:12
+    at next (E:\football_geek\football\node_modules\express\lib\router\index.js:275:10)
+    at getSecret (E:\football_geek\football\node_modules\jsonwebtoken\verify.js:76:14)
+    at router.use (E:\football_geek\football\server\routes\general.js:21:9)
+    at jwt.verify (E:\football_geek\football\server\routes\general.js:30:9)
+    at Object.module.exports [as verify] (E:\football_geek\football\node_modules\jsonwebtoken\verify.js:80:10)
+    at Layer.handle [as handle_request] (E:\football_geek\football\node_modules\express\lib\router\layer.js:95:5)
+    at Function.process_params (E:\football_geek\football\node_modules\express\lib\router\index.js:335:12)
+    at next (E:\football_geek\football\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (E:\football_geek\football\node_modules\express\lib\router\index.js:174:3)
+    at router (E:\football_geek\football\node_modules\express\lib\router\index.js:47:12)
+    at trim_prefix (E:\football_geek\football\node_modules\express\lib\router\index.js:317:13)
+    at E:\football_geek\football\node_modules\express\lib\router\index.js:284:7
+23:48:44:=>INTERNAL SERVER ERROR, STATUS CODE: 500
+Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+    at ObjectID [as ObjectId] (E:\football_geek\football\node_modules\mongodb-core\node_modules\bson\lib\bson\objectid.js:38:43)
+    at new ObjectID (E:\football_geek\football\node_modules\mongodb-core\node_modules\bson\lib\bson\objectid.js:57:11)
+    at router.post (E:\football_geek\football\server\routes\general.js:462:27)
+    at Layer.handle [as handle_request] (E:\football_geek\football\node_modules\express\lib\router\layer.js:95:5)
+    at E:\football_geek\football\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (E:\football_geek\football\node_modules\express\lib\router\index.js:335:12)
+    at next (E:\football_geek\football\node_modules\express\lib\router\index.js:275:10)
+    at jwt.verify (E:\football_geek\football\server\routes\general.js:30:9)
+    at E:\football_geek\football\node_modules\jsonwebtoken\verify.js:196:12
+    at getSecret (E:\football_geek\football\node_modules\jsonwebtoken\verify.js:76:14)
+    at Object.module.exports [as verify] (E:\football_geek\football\node_modules\jsonwebtoken\verify.js:80:10)
+    at router.use (E:\football_geek\football\server\routes\general.js:21:9)
+    at Layer.handle [as handle_request] (E:\football_geek\football\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (E:\football_geek\football\node_modules\express\lib\router\index.js:317:13)
+    at E:\football_geek\football\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (E:\football_geek\football\node_modules\express\lib\router\index.js:335:12)
+    at next (E:\football_geek\football\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (E:\football_geek\football\node_modules\express\lib\router\index.js:174:3)
+    at router (E:\football_geek\football\node_modules\express\lib\router\index.js:47:12)
+    at next (E:\football_geek\football\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (E:\football_geek\football\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (E:\football_geek\football\node_modules\express\lib\router\layer.js:95:5)
+23:48:46:=>INTERNAL SERVER ERROR, STATUS CODE: 500
+    at new ObjectID (E:\football_geek\football\node_modules\mongodb-core\node_modules\bson\lib\bson\objectid.js:57:11)
+    at Layer.handle [as handle_request] (E:\football_geek\football\node_modules\express\lib\router\layer.js:95:5)
+Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+    at ObjectID [as ObjectId] (E:\football_geek\football\node_modules\mongodb-core\node_modules\bson\lib\bson\objectid.js:38:43)
+    at router.post (E:\football_geek\football\server\routes\general.js:462:27)
+    at next (E:\football_geek\football\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (E:\football_geek\football\node_modules\express\lib\router\route.js:112:3)
+    at E:\football_geek\football\node_modules\express\lib\router\index.js:281:22
+    at next (E:\football_geek\football\node_modules\express\lib\router\index.js:275:10)
+    at jwt.verify (E:\football_geek\football\server\routes\general.js:30:9)
+    at Layer.handle [as handle_request] (E:\football_geek\football\node_modules\express\lib\router\layer.js:95:5)
+    at E:\football_geek\football\node_modules\jsonwebtoken\verify.js:196:12
+    at getSecret (E:\football_geek\football\node_modules\jsonwebtoken\verify.js:76:14)
+    at Function.process_params (E:\football_geek\football\node_modules\express\lib\router\index.js:335:12)
+    at Object.module.exports [as verify] (E:\football_geek\football\node_modules\jsonwebtoken\verify.js:80:10)
+    at router.use (E:\football_geek\football\server\routes\general.js:21:9)
+    at Layer.handle [as handle_request] (E:\football_geek\football\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (E:\football_geek\football\node_modules\express\lib\router\index.js:317:13)
+    at E:\football_geek\football\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (E:\football_geek\football\node_modules\express\lib\router\index.js:335:12)
+    at next (E:\football_geek\football\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (E:\football_geek\football\node_modules\express\lib\router\index.js:174:3)
+    at router (E:\football_geek\football\node_modules\express\lib\router\index.js:47:12)
+23:51:57:=>/profile
+23:51:57:=>profile Data fetched for 5b9a72609e47b70f8878f51e
+23:54:08:=>/profile
+23:54:08:=>profile Data fetched for 5b9a72609e47b70f8878f51e
+23:55:53:=>/profile
+23:55:53:=>profile Data fetched for 5b9a72609e47b70f8878f51e
+23:56:26:=>Telecasted userinfo for 5b9a99f1c76651181cc80da8

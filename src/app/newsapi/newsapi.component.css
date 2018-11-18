@@ -1,0 +1,44 @@
+.list-actor{
+  display:flex;
+}
+.carbon-image{
+  width: 60px;
+  height: 40px;
+}
+.incim{
+  width: 100%;
+  height: 100%;
+}
+img.small-loader {
+  margin: 0 auto;
+  display: block;
+  height: 40px;
+  width: 40px;
+}
+.api-a{
+  flex-direction: row;
+  text-decoration: none;
+}
+.ago{
+  color: #c6c4c4;
+  font-size: 10px;
+  text-align: right;
+  padding-top: 5px;
+}
+.f-d{
+  display: flex;
+  flex-direction: row;
+}
+.loader {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.list-actor {
+  padding: 4px;
+}
+.api-title {
+  float: right;
+  padding-left: 7px;
+  width: 80%;
+  font-size: 12px;
+}

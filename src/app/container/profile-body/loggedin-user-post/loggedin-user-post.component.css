@@ -1,0 +1,241 @@
+.postcards {
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+  padding: 0.2rem;
+}
+.post-pr-pic {
+  padding-right: 9px;
+}
+.post-rest {
+  padding-left: 0.7rem;
+  flex: 1;
+}
+.view-label {
+  font-size: 12px;
+  margin-top: 10px;
+}
+.post-all {
+  padding-top: 0.4rem;
+  display: flex;
+}
+.pr-avatar {
+  height: 40px;
+  width: 40px;
+  display: block;
+  border-radius: 4px;
+}
+.post-container-image {
+  text-align: center;
+  background-color: #272b30;
+  /* margin-bottom: 10px; */
+}
+.something{
+  position: fixed;
+  z-index: 10000000;
+  height: 200px;
+  width: 300px;
+  background-color: #0b2e13;
+}
+.post-header {
+  display: flex;
+  flex: 1;
+}
+.left-side {
+  flex: 20;
+  display: flex;
+}
+.right-side {
+  flex: 0.8;
+  display: flex;
+}
+
+.dropdown-menu a {
+  cursor: pointer;
+}
+._options_ {
+  display: flex;
+  flex-flow: column;
+  margin-top: 6px;
+  flex-basis: unset;
+  flex-direction: row;
+}
+.opt_containers {
+  flex: 0.91;
+}
+.fg-post-content {
+  display: flex;
+  flex-flow: column;
+  flex-basis: unset;
+  flex-direction: row;
+}
+
+.font-rem {
+  font-size: 0.9rem;
+}
+
+.pstcenter {
+  width: 88%;
+  display: flex;
+  flex-direction: column;
+}
+.hc_name {
+  display: flex;
+  flex-direction: row;
+}
+.spread-line {
+  display: flex;
+  justify-content: flex-start;
+  flex: 1;
+  flex-direction: row;
+}
+.small_button {
+  padding: 0.15rem 0.3rem;
+}
+.dd_options {
+  margin-left: auto;
+}
+.post-content {
+  text-align: justify;
+  padding-bottom: 0.4rem;
+  cursor: pointer;
+  border-radius: 0.4rem;
+  width: 96%;
+  word-wrap: break-word;
+  /* flex: 0.91; */
+  display: flex;
+}
+span.con-collection {
+  width: 100%;
+  word-wrap: break-word;
+}
+.sv {
+  font-size: 18px;
+}
+.my-list-group {
+  margin-top: -1px;
+}
+.post-im {
+  border-radius: 4px;
+  max-height: 330px;
+}
+.postlist:first-child {
+  border-top-left-radius: 0rem !important;
+  border-top-right-radius: 0rem !important;
+}
+.liked > span {
+  display: none;
+}
+.all_comment_container {
+  margin-top: 0.6rem;
+  display: none;
+}
+.post-comment-box {
+  display: flex;
+  flex-direction: row;
+}
+.user_loggedin_av {
+  height: 35px;
+  width: 35px;
+}
+.img_av {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+}
+.comment_input {
+  flex: 1;
+}
+.vertical_spacing {
+  padding: 5px;
+}
+.commentbox-padding {
+  padding: 0.55rem 1rem !important;
+  resize: none;
+}
+.show {
+  display: block;
+}
+.show-inline {
+  display: inline-block;
+}
+.com_n_child {
+  margin-right: 5px;
+}
+.hide {
+  display: none;
+}
+.comments_content {
+  background-color: #272b30;
+  padding: 8px;
+  border-radius: 4px;
+  margin-bottom: 2px;
+  display: flex;
+  margin-top: 2px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.comment_options {
+  cursor: pointer;
+}
+.timeholder {
+  font-size: x-small;
+  text-align: end;
+}
+span.cont {
+  font-size: small;
+}
+.op {
+  padding-left: 4px;
+  flex: 1;
+}
+.all_comments {
+  margin-top: 8px;
+}
+.commentor_avtr_holder {
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  border: 1px solid white;
+  overflow: hidden;
+}
+.commentor_avtr_holder > img {
+  width: 100%;
+  height: 100%;
+}
+/* Extra small devices (portrait phones, less than 576px)
+ No media query for `xs` since this is the default in Bootstrap
+
+ Small devices (landscape phones, 576px and up) */
+
+@media (max-width: 576px) {
+  .hc_name {
+    flex-direction: column;
+  }
+  .post-content {
+    flex: 1;
+  }
+  .postlist {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .pr-avatar {
+    height: 35px;
+    width: 35px;
+    display: block;
+  }
+  .header-content {
+    display: block;
+  }
+  .opt_containers {
+    flex: 1;
+  }
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 992px) {
+}
+
+@media (max-width: 1200px) {
+}

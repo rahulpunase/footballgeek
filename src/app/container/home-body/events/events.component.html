@@ -1,0 +1,26 @@
+<!--<div class="norm-events-container">-->
+  <!--<div class="event-array">-->
+    <!--<ul class="leagues alsodata" *ngFor="let events of eventsArray;">-->
+
+    <!--</ul>-->
+  <!--</div>-->
+<!--</div>-->
+<div class="con">
+  <div class="tb-in-events">
+    <div routerLinkActive="active" class="ev-tabs">
+      <a class="ila" routerLink="matches">Matches</a>
+    </div>
+    <div routerLinkActive="active" class="ev-tabs">
+      <a class="ila" routerLink="near-you">Near you</a>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-xl-12">
+      <div class="over_all">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>

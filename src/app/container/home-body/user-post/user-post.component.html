@@ -1,0 +1,146 @@
+<div *ngIf="postsData!=undefined && postsData.length === 0 && user!=undefined" style='margin-top: 0.4rem;' class="jumbotron">
+  <h1>No posts are available yet.</h1>
+</div>
+<ul class="list-group fg-my-list-group">
+  <div #posttodelete *ngFor="let post of postsData" class="list-group-item postlist">
+    <div id="post_{{post._id}}" class="all_posts">
+      <div class="post-all">
+        <div class="pstleft">
+          <div class="post-pr-pic">
+            <a routerLink="/profile/{{post.createdByUsername}}" [attr.data-floater]="post._id" (mouseout)="stopProcess()"
+              (click)="stopProcess()" (mouseover)="createAvatarInfoContainer(post.createdBy_id, floaterLinkimg)"
+              #floaterLinkimg>
+              <img [offset]="0" class="pr-avatar img-fluid" [lazyLoad]="path(post)" alt="img" onerror="javascript:this.src='assets/img/default_avatar.png'">
+            </a>
+            <!-- <img class="pr-avatar img-thumbnail" [src]="(user.profile_pic_path=='' || user.profile_pic_path==null) ?'assets/img/default_avatar.png':user.profile_pic_path" alt="" (error)="this.src='assets/img/default_avatar.png'"> -->
+          </div>
+        </div>
+        <div class="pstcenter">
+          <div class="spread-line">
+            <div class="hc_name">
+              <div>
+                <strong>{{post.createdByName}}</strong>&nbsp;&nbsp;
+              </div>
+              <div class="hc_username font-rem">
+                <a [attr.data-floater]="post._id" (mouseout)="stopProcess()" (click)="stopProcess()" (mouseover)="createAvatarInfoContainer(post.createdBy_id, floaterLink)"
+                  #floaterLink routerLink="/profile/{{post.createdByUsername}}">@{{post.createdByUsername}}</a>
+              </div>
+            </div>
+            <div title="{{post.createdAt | date: 'dd-MM-yyyy'}}" class="font-rem">
+              - {{ post.createdAt | date: 'MMMM dd'}}
+            </div>
+            <div class="dd_options">
+              <button class="btn small_button btn-sm btn-dark dropdown-toggle" style="cursor: pointer;" aria-expanded="false"
+                data-toggle="dropdown"></button>
+              <!-- FOR USER PRIVILEGES   -->
+              <div *ngIf="user!=undefined && user._id === post.createdBy_id" class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownPremium">
+                <a [routerLink]="['delete/' + post._id, { backTo: backTo }]"
+                  class="dropdown-item">Delete this post</a>
+                <a class="dropdown-item">Hide this post</a>
+                <button (click)="toggleCommentOptions(post._id, __com)" class="dropdown-item"><span #__com>Disallow comments</span></button>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item">Save this post</a>
+              </div>
+
+              <!-- FOR NON-LOGGED IN PRIVILIGES -->
+              <div *ngIf="user!=undefined && user._id !== post.createdBy_id" class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownPremium">
+                  <a class="dropdown-item">Hide this post</a>
+                  <a class="dropdown-item">Report this post</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item">Save this post</a>
+              </div>
+            </div>
+          </div>
+          <div class="fg-post-content">
+            <div (click)="leadToPost(post)" [ngStyle]="{'font-size': (post.content.length < 50) ? 'x-large' : 'normal'}"
+              class="post-content">
+              <span class='con-collection' [innerHTML]="post.content"></span>
+            </div>
+          </div>
+          <div class="fg-post-image" *ngIf="post.isImageContains">
+            <div class="post-container-image">
+              <img [offset]="0" [defaultImage]="'/assets/img/default_newsapi.png'" [lazyLoad]="domain + post.postImagePath"
+                alt="" class="img-fluid post-im">
+            </div>
+          </div>
+          <div class="_options_">
+            <div class="opt_containers">
+              <div class="btn-group">
+                <button #likebutton (click)="likepost(post, $event)" class="post-like btn btn-dark btn-sm">
+                  <i class="fa" [ngClass]="{'fa-thumbs-o-up':!post.loggedInUserLikedIt, 'fa-thumbs-up sv':post.loggedInUserLikedIt}"></i>
+                  <span *ngIf="!post.loggedInUserLikedIt">&nbsp;Like</span>
+                  <span [ngClass]="(post.likes > 0)?'show-inline':'hide'">&nbsp;{{post.likes}}</span>
+                </button>
+                <button #native (click)="initiateComment($event, post.__fn__all_comments, post._id)" class="post-comment btn btn-dark btn-sm">
+                  <i class="fa fa-comment"></i>
+                  <span>&nbsp;Comment</span>
+                  <span></span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div #allcommentcontainer class="all_comment_container">
+            <div class="post-comment-box">
+              <div class="av_on_comment">
+                <div class="user_loggedin_av">
+                  <img class="img_av img-fluid" [src]="(user.profile_pic_path_50_50 !=null)?user.profile_pic_path_50_50: user.profile_pic_path"
+                    alt="">
+                </div>
+              </div>
+              <div class="vertical_spacing"></div>
+              <div class="comment_input">
+                <textarea #commenttext (keyup)="commentInsertion($event, commenttext, post, post.__fn__all_comments)"
+                  placeholder="Write a comment" class='form-control comment-input commentbox-padding' name="" id=""
+                  rows="1"></textarea>
+              </div>
+            </div>
+            <div class='all_comments'>
+              <div *ngIf="post.__fn__all_comments[0]?.length > 0" class="view-label">
+                <span class="view-label-span">Most recent comments</span>
+              </div>
+              <div class='ng-repeat-comments' *ngFor="let comm of post.__fn__all_comments[0]; let i = index;"
+                [attr.data-index]="i">
+
+                <div class="comments_content">
+                  <div class="com_n_child">
+                    <div class='commentor_avtr_holder'>
+                      <img [offset]="0" class="commentor_avtr" [lazyLoad]="(comm.u._id === user._id) ? user.profile_pic_path : comm.u[0].profile_pic_path"
+                        alt="">
+                    </div>
+                  </div>
+                  <div class="com_n_child op">
+                    <div>
+                      <span class='ck'>
+                        <strong><a href=''>{{comm.u[0].name}}</a></strong>
+                      </span>&nbsp;
+                      <span class='ck'>
+                        <a (click)="stopProcess()" [attr.data-floater]="comm.u[0]._id" (mouseout)="stopProcess()"
+                          (mouseover)="createAvatarInfoContainer(comm.u[0]._id, floaterLinkCom)" #floaterLinkCom
+                          routerLink="/profile/{{comm.u[0].username}}">@{{comm.u[0].username}}</a>
+                      </span>&nbsp;
+                      <span class='cont'>{{comm.content}}</span>
+                    </div>
+                    <div class="timeholder">
+                      <i class="fa fa-clock-o"></i>&nbsp;{{ comm.createdAt | date: 'hh:mm a' }}
+                    </div>
+                  </div>
+                  <div class="com_n_child">
+                    <span data-toggle="dropdown" class='comment_options'>
+                      <i class="fa fa-ellipsis-h"></i>
+                    </span>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownPremium">
+                      <a (click)="deleteComment(comm, post._id, i)" *ngIf="user._id === comm.u[0]._id" class="dropdown-item">Delete</a>
+                      <a routerLink="/" *ngIf="user._id === comm.u[0]._id" class="dropdown-item">Edit</a>
+                      <a routerLink="/" class="dropdown-item">Hide this comment</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ul>
+<router-outlet></router-outlet>

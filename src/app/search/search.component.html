@@ -1,0 +1,66 @@
+<div class="container">
+  <div class="row">
+    <div class="align-items-center space col-12">
+      <div class="textbox">
+        <input #input (keyup)="searchQuery(input.value)" type="search" class="inp-tb" placeholder="Search">
+        <div class="searchresults all_res">
+          <div *ngIf="teamresult.length>0" class="results">
+            <h4 class="heading">Teams</h4>
+            <div class="cl con-tfl">
+              <div *ngFor="let team of teamresult" class="flex-suggest card">
+                <a (click)="loaderShow()" routerLink="/teams/{{team._id}}">
+                  <div class="img-sug">
+                    <div class="img-plug">
+                      <img onerror="this.src='/assets/img/default_logo_team.png'" class="img-fluid" [src]="'/assets/'+team.img_path" alt="">
+                    </div>
+                  </div>
+                  <div class="sug-name">
+                    {{team.name}}
+                  </div>
+
+                </a>
+              </div>
+              <div style="clear: both;"></div>
+            </div>
+          </div>
+          <div *ngIf="leagueresult.length>0" class="results">
+            <h4 class="heading">Competitions</h4>
+            <div class="cl con-tfl">
+              <div *ngFor="let league of leagueresult" class="flex-suggest card">
+                <a (click)="loaderShow()" routerLink="/compititions/{{league._id}}">
+                  <div class="img-sug">
+                    <div class="img-plug">
+                      <img onerror="this.src='/assets/img/default_logo_team.png'" class="img-fluid" [src]="'/assets/'+league.img_path" alt="">
+                    </div>
+                  </div>
+                  <div class="sug-name">
+                    {{league.name}}
+                  </div>
+                </a>
+              </div>
+              <div style="clear: both;"></div>
+            </div>
+          </div>
+          <div *ngIf="userresult.length>0" class="results">
+            <h4 class="heading">Users</h4>
+            <div class="cl con-tfl">
+              <div *ngFor="let user of userresult" class="flex-suggest card">
+                <a (click)="loaderShow()" routerLink="/profile/{{user.username}}">
+                  <div class="img-sug">
+                    <div class="img-plug">
+                      <img class="img-100" [src]="user.profile_pic_path" alt="">
+                    </div>
+                  </div>
+                  <div class="sug-name">
+                    {{user.name}}
+                  </div>
+                </a>
+              </div>
+              <div style="clear: both;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

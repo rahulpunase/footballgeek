@@ -1,0 +1,14 @@
+<div *ngFor="let followers of allFollowers" class="fol-parent-flexed">
+  <div class="par card">
+    <div class="wall-img"
+    [style.backgroundImage]="'url(' + followers.wall_pic.wall_pic_path + ')'"
+    [style.backgroundSize]="'cover'">
+    </div>
+    <div class="rest-body">
+      <div class="profile_pic">
+        <img class='p-o-c' [src]="followers.profile_pic_path" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="ap" style="clear: both;"></div>

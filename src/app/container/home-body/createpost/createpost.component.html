@@ -1,0 +1,44 @@
+<div class="">
+  <form enctype="multipart/form-data" (submit)="createAPost()" [formGroup]="createPostForm">
+    <div class="post_holder">
+      <div>
+        <i class="fa fa-address-card"></i>&nbsp;&nbsp;
+      </div>
+      <div class="form-group">
+        <h5>Post, Share, Tease...</h5>
+      </div>
+    </div>
+    <div class="form-group">
+      <textarea (focus)="makeitbig()" name="content" formControlName="content" rows="2" class="form-control content" #content id="createpost"
+        aria-describedby="" placeholder="Post something here..."></textarea>
+    </div>
+    <div *ngIf="createPostForm.controls.content.errors?.maxlength" class="help-block">
+      <div class="fg_has_error">
+        <span>Maximun 300 letters are allowed.</span>
+      </div>
+    </div>
+    <div class="form-down">
+      <div class="form-group">
+        <button [disabled]="!createPostForm.valid" type="submit" class="btn btn-primary btn-sm">Submit</button>
+      </div>
+        <span (click)="openWindowToSelectImages()" data-toggle="tooltip" data-placement="top" title="Add photos or videos" class="media-spacer btn btn-sm">
+          <i class="fa fa-image"></i>
+        </span>
+      <input #media (change)="fileEv($event)" formControlName="media" id="media" class="media" type="file" name="media" accept="image/gif,image/jpeg,image/jpg,image/png,video/mp4,video/x-m4v">
+    </div>
+  </form>
+  <div *ngIf="ifFilePresent" class="card thumbnail-container">
+    <div class="image-holder">
+      <div class="button_to_cancel">
+        <button (click)="resetImage()" class="btn btn-danger btn-sm">
+          <i class="fa fa-close"></i>
+        </button>
+      </div>
+      <img #postthumbnail class="img-fluid" src="" alt="">
+    </div>
+  </div>
+  <div class="newsapi">
+  </div>
+  <!-- <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fonefootball%2Fvideos%2F2261607350531197%2F&show_text=0&width=476"
+    width="100%" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe> -->
+</div>

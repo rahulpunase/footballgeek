@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Football</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-signin-client_id" content="827292871268-aipcsqks2sgjnjj62t05g5j600b4h47e.apps.googleusercontent.com">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script src="https://apis.google.com/js/platform.js"></script>
+  <script>
+    function onSignIn(user){
+      window.angularComponentReference.zone.run(()=>{
+        window.angularComponentReference.componentFn(user);
+      });
+    }
+  </script>
+</head>
+<body class="fg_gbl_body fg_text_color">
+<app-root></app-root>
+</body>
+</html>

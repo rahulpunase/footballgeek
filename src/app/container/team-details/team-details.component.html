@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xl-12">
+      <div class="card team-profile-header">
+        <div class="center-aligned">
+          <div class="clx-flex">
+            <div class="team-logo">
+              <img class="img-fluid" [src]="'/assets/'+team.img_path" alt="">
+            </div>
+            <div class="team-name">
+              <span class='vertical_spacing'>{{(team.name).toUpperCase()}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-8">
+      <div class="card news-profile">
+        <div class="basic-heading">
+          <h5>Recent news</h5>
+          <div class="suggested-news-content">
+              <div class="sm-box-news card" *ngFor="let news of suggestedNews">
+                  <a class="a-box" routerLink="/news/{{news.href}}">
+                    <div class="all">
+                      <div class="sm-img">
+                        <img class="img-fluid" [src]="domain + news.imagepath" alt="">
+                      </div>
+                      <div class="sug-title">
+                        <h5>{{news.title}}</h5>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

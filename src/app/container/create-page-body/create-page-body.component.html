@@ -1,0 +1,396 @@
+<div *ngIf="pageFound" class="container">
+  <div class="row">
+    <div class="col-xl-3 px4-right-padding">
+      <div class="side-on-create-page box-css">
+        <div class="pr-abs">
+          <div class="o-do">
+            <span class="o-do-text">Add a profile pic</span>
+          </div>
+        </div>
+        <div class="wall-pr-pic">
+          <img class="prkl" [src]="page.pageProfilePic" alt="">
+        </div>
+      </div>
+      <div class="basic-page-info-box box-css margin-boxes">
+        <div #alertBox class="alert-success disp">
+          <span></span>
+        </div>
+        <form (submit)="updateBasicDetails(alertBox, basicbox)" [formGroup]="pageMetaBasics">
+          <div class="heading-on-tips">
+            <h6>Basic information</h6>
+          </div>
+          <div class="input-holders">
+            <div class="in-hl">
+              <div [ngClass]="{'fg_has_error': (pageMetaBasics.controls.pageName.dirty && pageMetaBasics.controls.pageName.errors )}">
+                <input [attr.data-name]="'pageName'" formControlName="pageName" (focus)="makeButtonVisible(basicbox)"
+                  #pageName autocomplete="off" [value]="page.pageName" placeholder="Give a page name" name="pageName"
+                  class="pageinputs" type="text">
+                <div class="help-block">
+                  <div *ngIf="pageMetaBasics.controls.pageName.dirty && pageMetaBasics.controls.pageName.errors?.required"
+                    class="helps">Page name is required.</div>
+                  <div *ngIf="pageMetaBasics.controls.pageName.dirty && pageMetaBasics.controls.pageName.errors?.maxlength"
+                    class="helps">Maximum 30 characters allowed</div>
+                </div>
+              </div>
+            </div>
+            <div class="in-hl">
+              <div [ngClass]="{'fg_has_error': (pageMetaBasics.controls.pageUsername.errors )}">
+                <input [attr.data-name]="'pageUsername'" formControlName="pageUsername" (focus)="makeButtonVisible(basicbox)"
+                  #pageUsername autocomplete="off" [value]="page.pageUsername" placeholder="Give a page username name"
+                  name="pageUserName" class="pageinputs" type="text">
+                <div class="help-block">
+                  <div *ngIf=" pageMetaBasics.controls.pageUsername.errors?.required" class="helps">Page Username is
+                    required.</div>
+                  <div *ngIf="pageMetaBasics.controls.pageUsername.dirty && pageMetaBasics.controls.pageUsername.errors?.maxlength"
+                    class="helps">Maximum 30 characters allowed</div>
+                </div>
+              </div>
+            </div>
+            <div class="in-hl">
+              <div [ngClass]="{'fg_has_error': (pageMetaBasics.controls.description.dirty && pageMetaBasics.controls.description.errors )}">
+                <textarea spellcheck="false" [attr.data-name]="'description'" formControlName="description" (focus)="makeButtonVisible(basicbox)"
+                  #description autocomplete="off" [value]="page.description" placeholder="Provide short description what your is page about"
+                  class="pageinputs txt-area" name="description" id="" cols="30" rows="5"></textarea>
+                <div class="help-block">
+                  <div *ngIf="pageMetaBasics.controls.description.dirty && pageMetaBasics.controls.description.errors?.maxlength"
+                    class="helps">Maximun 200 characters allowed.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div #basicbox class="basic-save-changes">
+            <div class="cl-butn savech">
+              <button type="submit" #basicBoxButton [disabled]="pageMetaBasics.invalid" class="btn btn-sm btn-primary">Save
+                Changes</button>
+            </div>
+            <div class="cl-butn cancel">
+              <button type="reset" #basicCancelButton class="btn btn-sm btn-primary">Cancel</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="create-group box-css margin-boxes">
+        <div #grpalertBox class="alert-success disp">
+          <span></span>
+        </div>
+        <div class="heading-on-tips ">
+          <h6>Create group. Add with whom you enjoy watching football games.</h6>
+        </div>
+        <div class="input-holders">
+          <div class="in-hl">
+            <input #fetch (input)="fetchpeople(fetch.value)" type="search" class="pageinputs" placeholder="Search friends">
+            <div *ngIf="fetchedPeople.length > 0" class="sug-fe">
+              <div class="act-as-ul">
+                <div (click)=addPeopleToGroup(people) *ngFor="let people of fetchedPeople" class="act-as-li">
+                  <div class="in-name-only">
+                    <span class="oppa">{{people.name}}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div *ngIf="group.length > 0" class="in-hl">
+          <div class="in-group-m">
+            <div class="in-fl">
+              <div *ngFor="let gp of group" class="cli-box">
+                <div (click)="removeFromGroup(gp._id)" class="ab-cross">
+                  <i class="fa fa-close"></i>
+                </div>
+                <div class="con-g">
+                  <div class="gp-img-holder">
+                    <img class="im-gp" [src]="(gp.profile_pic_path_50_50 !=null)?gp.profile_pic_path_50_50: gp.profile_pic_path">
+                  </div>
+                  <div class="name">
+                    <span [title]="gp.name" class="oaasl" [innerHTML]="generalFunctionService.shortenString(gp.name, 10, true)"></span>
+                  </div>
+                </div>
+                <div class="ola">
+                </div>
+              </div>
+              <div style="clear:both;"></div>
+            </div>
+          </div>
+        </div>
+        <div style="padding: 4px;" class="in-hl">
+          <div class="help-block">
+            <span class="hb">
+              The group help you add more friends to your page. People in your group can also help sharing, posting and
+              managing your page. However, you'll remain admin.
+            </span></div>
+        </div>
+        <div *ngIf="group.length > 0" class="group-save-changes" style="display: flex;">
+          <div class="cl-butn savech">
+            <button (click)="createGroupForPage(grpalertBox)" class="btn btn-sm btn-primary" type="submit">Save Changes</button>
+          </div>
+        </div>
+      </div>
+      <div class="publishing-page box-css margin-boxes">
+        <div class="heading-on-tips">
+          <h3 class="head">Publish your page. Your page will be visible to others to follow and enjoy your posts once
+            it is published.</h3>
+        </div>
+        <div class="in-hl">
+          <div class="pub-save-changes">
+            <div class="cl-butn savech">
+              <ng-template [ngIf]="!page.isPublished" [ngIfElse]="notpublished">
+                <button (click)="publishPageRequest(true, showErrorBoxBut)" type="button" class="btn btn-sm btn-primary">
+                  <i class="fa fa-toggle-off"></i>
+                  Publish page</button>
+              </ng-template>
+              <ng-template #notpublished>
+                <button (click)="publishPageRequest(false, showErrorBoxBut)" type="button" class="btn btn-sm btn-primary">
+                  <i class="fa fa-toggle-off"></i>
+                  Unpublish page</button>
+              </ng-template>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- WALL PIC CONTAINER SECTION STARTS HERE -->
+    <div class="col-xl-9 px4-left-padding">
+      <div class="cp-container">
+        <div class="cp-ev">
+          <div class="cp-wall-pic">
+            <div class="wall-container box-css">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-4 no-left-padding">
+            <div class="how-to-info margin-boxes box-css">
+              <div class="heading-on-tips">
+                <h3 class="head">Welcome, create your page, make posts, share with your enthusiastic football fans and
+                  much more</h3>
+              </div>
+              <ul class="tips">
+                <li class="tips-li">
+                  <p class="p-tips"><strong>You can add profile picture.</strong></p>
+                  <p><span class="norm">Profile pictures help you build an identity for your Page. They also help
+                      people find your Page and recognise it in posts, comments and more.</span></p>
+                </li>
+                <li class="tips-li">
+                  <p class="p-tips"><strong>Create a username for your page.</strong> </p>
+                  <p><span class="norm">A username will help a page to be uniquely idintify.</span></p>
+                </li>
+                <li class="tips-li">
+                  <p class="p-tips"><strong>Share your page.</strong> </p>
+                  <p><span class="norm">Sharing is promotion. The more people know about it, the more the value of your
+                      page will increase.</span></p>
+                </li>
+                <li class="tips-li">
+                  <p class="p-tips"></p>
+                </li>
+              </ul>
+            </div>
+            <div class="data-made margin-boxes box-css">
+              <div class="d-m-container">
+                <div class="abk-cn">
+                  <div class="heading-on-tips">
+                    <h3 class="head cn">Followers</h3>
+                  </div>
+                  <div class="in-hl">
+                    <div class="count">
+                      <span>0</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="abk-cn">
+                  <div class="heading-on-tips">
+                    <h3 class="head cn">Posts</h3>
+                  </div>
+                  <div class="in-hl">
+                    <div class="count">
+                      <span>0</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="abk-cn">
+                  <div class="heading-on-tips">
+                    <h3 class="head cn">Requests</h3>
+                  </div>
+                  <div class="in-hl">
+                    <div class="count">
+                      <span>0</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-8 no-right-padding">
+            <div class="detailed-page-info box-css margin-boxes">
+              <div #alertBoxDet class="alert-success disp">
+                <span></span>
+              </div>
+              <div class="heading-on-tips">
+                <h3 class="head">Add additional information to your page. You can choose the privacy options.</h3>
+              </div>
+              <form (submit)="updateAllDetails(alertBoxDet)" [formGroup]="pageMetaDetail" action="">
+                <div class="in-hl">
+                  <div class="sr-container">
+                    <div class="sr-all-e">
+                      <div class="left-sr">
+                        <span class="lab">Add your websites: </span>
+                      </div>
+                      <div class="right-sr">
+                        <div class="in-rows">
+                          <div *ngFor="let inp of websiteInputs" class="in-hl">
+                            <input [formControlName]="inp.name" autocomplete="off" type="text" class="pageinputs"
+                              [name]="inp.name">
+                          </div>
+                        </div>
+                        <div class="add-btn">
+                          <div class="addbtnhl">
+                            <button (click)="addInputs('website')" [disabled]="websiteInputs.length > 2" type="button"
+                              class="btn btn-sm btn-primary mr1"><i class="fa fa-plus"></i></button>
+                            <button (click)="removeInputsForWebsites()" type="button" [disabled]="websiteInputs.length === 1"
+                              class="btn btn-sm btn-primary mr1"><i class="fa fa-minus"></i></button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sr-container">
+                    <div class="sr-all-e">
+                      <div class="left-sr">
+                        <span class="lab">Add your Emails: </span>
+                      </div>
+                      <div class="right-sr">
+                        <div class="in-rows">
+                          <div *ngFor="let inp of emailsInputs" class="in-hl">
+                            <input [formControlName]="inp.name" autocomplete="off" type="text" class="pageinputs"
+                              [name]="inp.name">
+                          </div>
+                        </div>
+                        <div class="add-btn">
+                          <div class="addbtnhl">
+                            <button (click)="addInputs('email')" [disabled]="emailsInputs.length > 2" type="button"
+                              class="btn btn-sm btn-primary mr1"><i class="fa fa-plus"></i></button>
+                            <button (click)="removeInputsForEmails()" type="button" [disabled]="emailsInputs.length === 1"
+                              class="btn btn-sm btn-primary mr1"><i class="fa fa-minus"></i></button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sr-container">
+                    <div class="sr-all-e">
+                      <div class="left-sr">
+                        <span class="lab">Add a tagline: </span>
+                      </div>
+                      <div class="right-sr">
+                        <div class="in-hl">
+                          <input formControlName="tagLine" autocomplete="off" type="text" class="pageinputs" name="tagline">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sr-container">
+                    <div class="sr-all-e">
+                      <div class="left-sr">
+                        <span class="lab">Privacy of page: </span>
+                      </div>
+                      <div class="right-sr col">
+                        <div class="in-hl">
+                          <input value="true" formControlName="isPagePrivate" id='pr-page-private' autocomplete="off"
+                            type="radio" class="" name="isPagePrivate">
+                          <span class='p-lab'>
+                            <label for="pr-page-private">Keep it private</label>
+                          </span>
+                        </div>
+                        <div class="in-hl">
+                          <input checked value="false" formControlName="isPagePrivate" id='pr-page-public' autocomplete="off"
+                            type="radio" class="" name="isPagePrivate">
+                          <span class='p-lab'>
+                            <label for="pr-page-public">Keep it public</label>
+                          </span>
+                        </div>
+                        <div class="in-hl">
+                          <div class="help-block">
+                            <span class="hb">Keeping it public helps other users to directly follow your page. If
+                              you've kept it as private, you'll receive following request from user.</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="detail-save-changes">
+                    <div class="cl-butn savech">
+                      <button [disabled]="pageMetaDetail.invalid" type="submit" class="btn btn-sm btn-primary">Save
+                        Changes</button>
+                    </div>
+                    <div class="cl-butn cancel">
+                      <button type="reset" #basicCancelButton class="btn btn-sm btn-primary">Cancel</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-7 no-left-padding">
+            <div class="box-css margin-boxes no-border">
+              <ul class="nav nav-tabs fg_global_tabs">
+                <a href="" class="nav-item nav-link fg_global_tab-item-links active">Posts</a>
+                <a href="" class="nav-item nav-link fg_global_tab-item-links">Followings</a>
+                <a href="" class="nav-item nav-link fg_global_tab-item-links">Request</a>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xl-5 no-right-padding">
+            <div class="box-css margin-boxes no-border">
+              <!-- <app-createpost></app-createpost> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="col-xl-3"> </div> -->
+  </div>
+</div>
+<div *ngIf="!pageFound" class="container">
+  <div class="row">
+    <div class="col-xl-10 fg-mar-0-auto">
+      <div class="warning">
+        <p class="message">Sorry, No such page found associated to your account. Either you have deleted it or you do
+          not have permission to access the page rights.</p>
+      </div>
+      <div class="w-link">
+        <div class="create-own">
+          <p>Create your own page</p>
+        </div>
+        <div class="btn-holder">
+          <a routerLink="/selectpagename" class="btn btn-sm btn-primary">Create Page</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- MODALSSSSSSS -->
+<button #showErrorBoxBut style="display: none;" type="button" class="btn btn-primary" data-toggle="modal" data-target="#showErrorBox"></button>
+<div class="modal fade" id="showErrorBox" tabindex="-1" role="dialog" aria-labelledby="showErrorBoxTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="showErrorBoxTitle">Page cannot be published.</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>

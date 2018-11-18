@@ -1,0 +1,56 @@
+20:42:53:=> logged in successfully with token #GOOGLEUSER::=>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1Yjk5NDEwODQxOWMzNTI1NjQzNWMxODMiLCJpYXQiOjE1MzkzNTcxNzMsImV4cCI6MTUzOTQ0MzU3M30.zUKmKi1-vJyR-lWK7X4rSJKZxDNKfPoY2XyyBvh7tk4
+20:42:53:=>Logging in with google id...
+20:42:53:=>/profile
+20:42:53:=>profile Data fetched for 5b994108419c35256435c183
+20:49:36:=>INTERNAL SERVER ERROR, STATUS CODE: 500
+    at loginUser (E:\football_geek\football\server\controllers\controller.auth.js:11:17)
+ReferenceError: UserdataSc is not defined
+    at Layer.handle [as handle_request] (E:\football_geek\football\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\football_geek\football\node_modules\express\lib\router\route.js:137:13)
+    at Layer.handle [as handle_request] (E:\football_geek\football\node_modules\express\lib\router\layer.js:95:5)
+    at E:\football_geek\football\node_modules\express\lib\router\index.js:281:22
+    at Route.dispatch (E:\football_geek\football\node_modules\express\lib\router\route.js:112:3)
+    at Function.process_params (E:\football_geek\football\node_modules\express\lib\router\index.js:335:12)
+    at next (E:\football_geek\football\node_modules\express\lib\router\index.js:275:10)
+    at Layer.handle [as handle_request] (E:\football_geek\football\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (E:\football_geek\football\node_modules\express\lib\router\index.js:317:13)
+    at Function.handle (E:\football_geek\football\node_modules\express\lib\router\index.js:174:3)
+    at Function.process_params (E:\football_geek\football\node_modules\express\lib\router\index.js:335:12)
+    at E:\football_geek\football\node_modules\express\lib\router\index.js:284:7
+    at router (E:\football_geek\football\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (E:\football_geek\football\node_modules\express\lib\router\layer.js:95:5)
+    at serveStatic (E:\football_geek\football\node_modules\serve-static\index.js:75:16)
+    at trim_prefix (E:\football_geek\football\node_modules\express\lib\router\index.js:317:13)
+    at Function.process_params (E:\football_geek\football\node_modules\express\lib\router\index.js:335:12)
+    at E:\football_geek\football\node_modules\express\lib\router\index.js:284:7
+    at serveStatic (E:\football_geek\football\node_modules\serve-static\index.js:75:16)
+    at next (E:\football_geek\football\node_modules\express\lib\router\index.js:275:10)
+    at next (E:\football_geek\football\node_modules\express\lib\router\index.js:275:10)
+20:52:47:=>varunbasedia logged in successfully with token::=>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1YmJiN2M4YmYzNzljNzI4NTBkNjU2MjkiLCJpYXQiOjE1MzkzNTc3NjcsImV4cCI6MTUzOTQ0NDE2N30.aBw4KS9K35Cxl4F4cwUlBfPI14EFrLLq9RBSn-fLDuE
+20:52:48:=>/profile
+20:52:48:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+22:22:08:=>/profile
+22:22:08:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+22:34:50:=>/whoseprofile/varunbasedia
+22:34:50:=>DATA SENT TO CLIENT SUCCESSFULLY
+22:35:05:=>/saveeditedprofile
+22:35:05:=>DATA SENT TO CLIENT SUCCESSFULLY
+22:35:05:=>/profile
+22:35:05:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+22:35:56:=>Telecasted userinfo for 5bbb7c8bf379c72850d65629
+22:35:59:=>Telecasted userinfo for 5bbb7c8bf379c72850d65629
+22:36:02:=>Telecasted userinfo for 5bbb7c8bf379c72850d65629
+22:36:07:=>Telecasted userinfo for 5bbb7c8bf379c72850d65629
+22:36:11:=>Telecasted userinfo for 5bbb7c8bf379c72850d65629
+22:36:27:=>Telecasted userinfo for 5bbb7c8bf379c72850d65629
+22:36:36:=>Telecasted userinfo for 5bbb7c8bf379c72850d65629
+22:38:41:=>Telecasted userinfo for 5bbb7c8bf379c72850d65629
+22:38:45:=>Telecasted userinfo for 5bbb7c51f379c72850d65627
+23:0:50:=>Logging in with google id...
+23:0:50:=> logged in successfully with token #GOOGLEUSER::=>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1Yjk5NDEwODQxOWMzNTI1NjQzNWMxODMiLCJpYXQiOjE1MzkzNjU0NTAsImV4cCI6MTUzOTQ1MTg1MH0.AwVMVRY38uH5FLpZbY1DasrlOIz3MqPVH_t13QSw7Tw
+23:0:50:=>/profile
+23:0:50:=>profile Data fetched for 5b994108419c35256435c183
+23:0:57:=>/whoseprofile/rahulpunase
+23:0:57:=>DATA SENT TO CLIENT SUCCESSFULLY
+23:1:41:=>/whoseprofile/pratikshasinha
+23:1:41:=>DATA SENT TO CLIENT SUCCESSFULLY

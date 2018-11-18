@@ -1,0 +1,126 @@
+<div *ngIf="user != undefined" class="side-bar-container">
+  <div class="avatar card">
+    <div
+      [style.background-image]="userWallPicTrusted"
+      [style.background-size]="'cover'"
+      class="wa"></div>
+    <div class="avilink">
+      <a class='av_link' (click)=openModal(avatarModalButton)>
+        <img data-toggle="tooltip" data-placement="top" title="Add/Change profile avatar" class="bpj" [src]="(user.profile_pic_path_50_50 != null) ? user.profile_pic_path_50_50 : user.profile_pic_path"
+          alt="" (error)="this.src='assets/img/default_avatar.png'">
+      </a>
+      <div *ngIf="user.isVerified" class="verified_mark">
+        <i class="fa fa-check-circle-o"></i>
+      </div>
+      <div class="av_name">
+        <div class="un-name">
+          <strong>{{user.name}}</strong>
+        </div>
+        <div class="un-username">
+          <span>@{{user.username}}</span>
+        </div>
+      </div>
+    </div>
+    <div class="userdetail">
+      <div class="ud-child">
+        <div class="ud-heading">
+          <span>
+            <strong>Followers</strong>
+          </span>
+        </div>
+        <div class="ud-column">
+          <strong>{{followers.length}}</strong>
+        </div>
+      </div>
+      <div class="ud-child">
+        <div class="ud-heading">
+          <span>
+            <strong>Teams</strong>
+          </span>
+        </div>
+        <div class="ud-column"></div>
+      </div>
+      <div class="ud-child">
+        <div class="ud-heading">
+          <span>
+            <strong>Followings</strong>
+          </span>
+        </div>
+        <div class="ud-column">
+          <strong>{{followings.length}}</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ng-template [ngIf]="sideTeams.length > 0" [ngIfElse]="loader">
+      <div  class="side-teams">
+          <h6>Popular teams</h6>
+          <ul class="list-group">
+            <a [routerLink]="'/teams/'+steams._id" *ngFor="let steams of sideTeams" class="list-group-item">
+              <div class=list-parent>
+                <div class="pil-img">
+                  <img onerror="this.src='/assets/img/default_logo_team.png'" class="ol-so" [src]="'/assets/' + steams.img_path" alt="">
+                </div>
+                <div class="cla-name">
+                  <span>
+                    {{steams.name}}
+                  </span>
+                </div>
+              </div>
+            </a>
+          </ul>
+        </div>
+  </ng-template>
+  <ng-template #loader>
+    <div class="loader">
+      <img src="/assets/img/animated_spinner.gif" alt="" class="small-loader">
+    </div>
+  </ng-template>
+
+</div>
+<!-- Button trigger modal -->
+<button #avatarModalButton style="display: none;" type="button" class="btn btn-primary" data-toggle="modal" data-target="#avatarModal"></button>
+<!-- Modal -->
+<div class="modal fade" id="avatarModal" tabindex="-1" role="dialog" aria-labelledby="avatarModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="avatarModalLabel">Avatar Pic</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="apply-default-avatars">
+          <div #dfAv class="row_av_1" id="row_av-1">
+            <div (click)="selectAvatar(av, $event)" *ngFor="let av of default_av_ar1" class="av_on_select">
+              <img class="df_av_select" [src]="av" alt="">
+            </div>
+          </div>
+          <div class="row_av_2" id="row_av-2"></div>
+        </div>
+        <h4>Or Choose from drive</h4>
+        <form #form [formGroup]="avataruploader" enctype="multipart/form-data" (submit)="uploadAvatar(close)">
+          <label for="chooseavatarpic"></label>
+          <input #avatar (change)="createThumbnail($event)" id="chooseavatarpic" name="avatar" class="form-control" type="file">
+          <input #defaultAvatarPathInputTag type="hidden" name="default_avatar_path">
+          <input style='display: none;' #subavatar type="submit">
+        </form>
+        <div *ngIf="ifFilePresent" class="card thumbnail-container">
+          <div class="image-holder">
+            <div class="button_to_cancel">
+              <button (click)="resetImage()" class="btn btn-danger btn-sm">
+                <i class="fa fa-close"></i>
+              </button>
+            </div>
+            <img #avatarThumbnail class="img-fluid" src="" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button #close type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button [disabled]="!ifFilePresent  && !df_selected" (click)="subavatar.click()" type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>

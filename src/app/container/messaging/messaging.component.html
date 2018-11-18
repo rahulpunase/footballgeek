@@ -1,0 +1,73 @@
+<div class="container">
+  <div class="row">
+    <div #conversationContainer class="col-xl-12 mobile_view_container">
+      <div class="opt_con">
+        <div class="dlfle">
+          <div class="back-to-message">
+            <a class="back-button" (click)="closeMessagingBox()"><i class="fa fa-arrow-circle-left"></i></a>
+          </div>
+          <div class="conversationSearch">
+            <input placeholder="Search people or pages for direct messages" #input (keyup)="searchPeople(input.value)" type="text" class="conversation-search">
+          </div>
+        </div>
+        <div *ngIf="peoples.length > 0" class="people_and_page_suggestion">
+          <div class="peopleSugg">
+            <div class="sug_people_holder" *ngFor="let people of peoples">
+              <a (click)="openConversationForPeople(people._id)">
+                <div class="cnn_container">
+                  <div class="pr_img">
+                    <img [src]="(people.profile_pic_path_50_50 !=null)?people.profile_pic_path_50_50: people.profile_pic_path" alt="">
+                  </div>
+                  <div class="con_name">
+                    <span><strong>{{people.name}}</strong></span>
+                  </div>
+                  <div class="con_username">
+                    <span>@{{people.username}}</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="conversationHolder">
+        <div class="no_pad">
+          <div *ngIf="perConversations.length > 0" class="route-container">
+            <div class="conversations">
+              <div class="convo-list">
+                <div  (click) = openConversationForPeople(conversation.cWU._id) class="convo-item" *ngFor="let conversation of perConversations;">
+                  <div class="all_cem-holder">
+                    <div class="pr_img">
+                      <img [src]="conversation.cWU.profile_pic_path_50_50 === null? conversation.cWU.profile_pic_path : conversation.cWU.profile_pic_path_50_50" alt="">
+                    </div>
+                    <div class="mAndName">
+                      <div class="info-h">
+                        <div class="name">
+                          <span>{{ conversation.cWU.name }}</span>
+                        </div>
+                        <div class="username">
+                          <a [attr.data-floater]="conversation._id" (mouseout)="stopProcess()" (click)="stopProcess()" (mouseover)="createAvatarInfoContainer(conversation.cWU._id, floaterLink)" #floaterLink routerLink="/profile/{{conversation.cWU.username}}">@{{conversation.cWU.username}}</a>
+                        </div>
+                      </div>
+                      <div *ngIf="fullMode" class="last_message">
+                        <span>
+                          {{ conversation.lastMessages[0]?.messageBody }}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mid-way-border">
+                    <div class="act-border"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div #messagingContainer class="col-xl-12">
+      <app-message-box #appmessage></app-message-box>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+.fg-fixed{
+  position: fixed;
+  width:100%;
+  z-index: 500000000;
+  display: none;
+  padding: 1.5rem;
+}
+.show{
+  display: block !important;
+}
+.user_info_floater{
+  position: absolute;
+  z-index: 500000000;
+  display: none;
+  height: 314px;
+  width: 260px;
+  background: #1b1e21;
+  overflow: hidden;
+  box-shadow: 2px 2px 24px 2px rgba(0,0,0,0.5);
+}
+
+@media (max-width: 576px) {
+
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 992px) {
+}
+
+@media (max-width: 1200px) {
+}

@@ -1,0 +1,76 @@
+.matches-ev {
+  margin-top: 10px;
+}
+.matches-col {
+  padding: 10px;
+}
+.match-block {
+  display: flex;
+}
+.home-team {
+  justify-content: flex-end;
+}
+
+.fl-mt-bl {
+  flex: 1;
+  display: flex;
+}
+.away-team {
+  justify-content: flex-end;
+  flex-direction: row-reverse;
+}
+.img-h {
+  width: 30px;
+  height: 30px;
+  margin-top: 5px;
+}
+img.hn-src {
+  width: 100%;
+  height: 100%;
+}
+.score {
+  flex: 0.5 !important;
+}
+.score-board {
+  display: flex;
+  margin: 0 auto;
+}
+.canceled-board{
+  display: flex;
+  margin: 0 auto;
+}
+.sb-holder{
+  margin: 0 auto;
+  background: #202327;
+  padding: 6px 14px 6px 14px;
+  border-radius: 4px;
+}
+.home-name, .away-name {
+  line-height: 30px;
+  padding: 0px 10px 0px 10px;
+}
+.sc-fl {
+  padding: 2px;
+}
+.onMobileShow{
+  display: none;
+}
+
+
+@media (max-width: 576px) {
+  .onMobileHide{
+    display: none;
+  }
+  .onMobileShow{
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 992px) {
+}
+
+@media (max-width: 1200px) {
+}

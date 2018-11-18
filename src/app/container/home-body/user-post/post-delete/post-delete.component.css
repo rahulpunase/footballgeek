@@ -1,0 +1,66 @@
+.post-data-handler {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: rgba(0,0,0,0.5);
+  top: 0;
+  overflow: hidden;
+  left: 0;
+  z-index: 1000;
+}
+.post-header {
+  display: flex;
+  flex: 1;
+}
+.left-side {
+  flex: 20;
+  display: flex;
+}
+.right-side {
+  flex: 0.8;
+  display: flex;
+}
+.post-content {
+  text-align: justify;
+  padding-bottom: 0.4rem;
+  cursor: pointer;
+  border-radius: 0.4rem;
+  padding: 4px;
+  flex: 0.91;
+  display: flex;
+}
+.fg-post-content {
+  display: flex;
+  flex-flow: column;
+  flex-basis: unset;
+  flex-direction: row-reverse;
+}
+.hc_name{
+  display: flex;
+}
+.pr-avatar {
+  height: 50px;
+  width: 50px;
+  display: block;
+}
+.postcards {
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+  padding: 0.2rem;
+}
+.post-pr-pic {
+  padding-right: 9px;
+}
+.post-rest {
+  padding-left: 0.7rem;
+  flex: 1;
+}
+.post-all {
+  padding-top: 0.4rem;
+}
+.fg-post-content {
+  display: flex;
+  flex-flow: column;
+  flex-basis: unset;
+  flex-direction: row-reverse;
+}

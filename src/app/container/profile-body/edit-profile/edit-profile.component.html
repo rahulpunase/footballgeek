@@ -1,0 +1,91 @@
+<div class="modal fade bd-example-modal-lg" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form (submit)="makeRequestToSaveEditedProfile()" [formGroup]="editProfile" enctype="multipart/form-data">
+          <div class="form-group">
+            <div appWallImageMover id="wallimg" #wallimg class="wall_pic_changer"
+            [style.background-image]="trustedURL"
+            [style.background-size]="'cover'"
+            [style.background-position-x]="loggedInUser.wall_pic.wall_x + 'px'"
+            [style.background-position-y]="loggedInUser.wall_pic.wall_y + 'px'">
+              <div #goneelemenet class="wall_pic_options">
+                <div class="opt_1 wa-opt">
+                  <button type="button" (click)="clickWallInputRef()" class="change_wall_pic ch-buttons">
+                    <i class="fa fa-undo"></i>
+                    <span>Change</span>
+                  </button>
+                </div>
+                <div class="opt_2 wa-opt">
+                  <button (click)="removewallimg(wallimg)" type="button" class="remove_wall_pic ch-buttons">
+                    <i class="fa fa-remove"></i>
+                    <span>Remove</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <input id="wallInputRef" #wallInputRef (change)="createThumbNailWall($event, wallimg)" style='display: none;' type="file"
+              name="wall_edit_media">
+          </div>
+          <div class="form-group marginal-editor">
+            <div class="profile_pic_changer">
+              <div class="pr_pic_container">
+                <div class="con-1">
+                    <img #avatarimg [src]="loggedInUser.profile_pic_path" alt="">
+                </div>
+                <div class="con-2">
+                  <div class="save-wall">
+                    <button (click)="makeRequestToSaveWall()" class="btn btn-sm btn-primary" type="button">Save wall picture</button>
+                  </div>
+                </div>
+              </div>
+              <div class="profile_pic_options">
+                <div class="opt_1 wa-opt">
+                  <button type="button" (click)="clickAvatarInputRef()" class="change_wall_pic ch-buttons">
+                    <i class="fa fa-undo"></i>
+                  </button>
+                </div>
+                <div class="opt_2 wa-opt">
+                  <button type="button" class="remove_wall_pic ch-buttons">
+                    <i class="fa fa-remove"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <input #avatarInputRef id="avatarInputRef" (change)="createThumbNailAvatar($event)" style='display: none;' type="file" name="avatar_edit_media">
+          </div>
+          <div class="form-group" [ngClass]="{'fg_has_error': editProfile.controls.fullname_edit.dirty && editProfile.controls.fullname_edit.errors  , 'fg_has_success': !editProfile.controls.fullname_edit.errors }">
+            <input autocomplete="off" formControlName="fullname_edit" class="form-control" type="text" name="fullname_edit" [value]="loggedInUser.name">
+            <div class="help-block">
+              <div *ngIf="editProfile.controls.fullname_edit.dirty && editProfile.controls.fullname_edit.errors?.required">Full name is required</div>
+              <div *ngIf="editProfile.controls.fullname_edit.dirty && editProfile.controls.fullname_edit.errors?.minlength">Minimum length should be 5 chanracters</div>
+              <div *ngIf="editProfile.controls.fullname_edit.dirty && !editProfile.controls.fullname_edit.errors">Looks good.</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-control">
+              <span>@</span>
+              <input autocomplete="off" formControlName="username_edit" disabled class="usr-name" type="text" name="username_edit" [value]="loggedInUser.username">
+            </div>
+          </div>
+          <div class="form-group">
+            <textarea formControlName="bio_edit" placeholder="Write a short bio about yourself." class="form-control" type="text" [innerText]="loggedInUser.bio"
+              name="bio_edit"></textarea>
+          </div>
+          <input value='' style="display: none;" type="text" type="submit" id="sub_edited_profile_form">
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+        <button (click)="submitForm()" [disabled]="!editProfile.valid" type="button" class="btn btn-primary btn-sm">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>

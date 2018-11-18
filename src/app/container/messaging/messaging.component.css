@@ -1,0 +1,134 @@
+.conversation-search{
+  width: 100%;
+  padding: 0.8rem;
+  border: 0;
+  background: transparent;
+  outline: none;
+  color: white;
+}
+.conversationSearch{
+  color: #fff;
+  background: #33383e;
+  border: none;
+  width: 100%;
+  border-radius: 0.4rem;
+  outline: none;
+  transition: all 0.4s ease;
+}
+.back-to-message{
+  padding: 0.3rem;
+  font-size: 28px;
+}
+.opt_con{
+  color: #fff;
+  background: #33383e;
+  border: none;
+  width: 100%;
+  border-radius: 0.4rem;
+  outline: none;
+  padding-right: 0.4rem;
+  padding-left: 0.4rem;
+  transition: all 0.4s ease;
+}
+.dlfle{
+  display: flex;
+}
+.sug_people_holder {
+  margin-top: 4px;
+  margin-bottom: 4px;
+  border-radius: 4px;
+  padding: 4px;
+}
+.sug_people_holder:hover{
+  background-color: #272b30;
+}
+.cnn_container {
+  display: flex;
+}
+.pr_img {
+  height: 40px;
+  overflow: hidden;
+  width: 40px;
+  border-radius: 4px;
+}
+.pr_img img{
+  width: 100%;
+  height: 100%;
+}
+.con_name {
+  padding-left: 10px;
+  line-height: 30px;
+}
+.con_username {
+  font-size: 14px;
+  line-height: 32px;
+  padding-left: 10px;
+}
+.people_and_page_suggestion{
+  padding: 0px 0px 6px 0px;
+}
+.conversations {
+  margin-top: 10px;
+}
+.all_cem-holder{
+  display: flex;
+}
+.pr_img {
+  height: 40px;
+  overflow: hidden;
+  width: 40px;
+  border-radius: 4px;
+}
+.pr_img img{
+  width: 100%;
+  height: 100%;
+}
+.mAndName{
+  flex:1;
+}
+.name {
+  padding-left: 10px;
+  line-height: 20px;
+  font-size: 16px;
+}
+.username {
+  font-size: 12px;
+  line-height: 26px;
+  padding-left: 8px;
+}
+.info-h {
+  display: flex;
+}
+.last_message {
+  padding-left: 10px;
+  font-size: 12px;
+  color: #928e8e;
+  line-height: 12px;
+}
+.convo-list{
+
+}
+.convo-item {
+  /*padding: 10px;*/
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.convo-item:hover {
+  cursor: pointer;
+}
+.mid-way-border{
+  width: 100%;
+  height: 1px;
+  background-color: transparent;
+  padding: 8px 0px;
+}
+/*.mid-way-border:last-of-type{*/
+  /*display: none;*/
+/*}*/
+.act-border{
+  margin: 0 auto;
+  background-color: #141618;
+  height: 1px;
+  width: 90%;
+}
+

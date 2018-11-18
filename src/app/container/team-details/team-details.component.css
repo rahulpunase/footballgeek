@@ -1,0 +1,84 @@
+.clx-flex{
+  display: flex;
+  flex-direction: row;
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+.center-aligned{
+  text-align: center;
+  margin: 0 auto;
+  width: fit-content;
+}
+.team-logo{
+  width: 60px;
+  height: 60px;
+}
+.team-name{
+  font-weight: 600;
+  font-size: 28px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+.team-profile-header{
+  margin-bottom: 10px;
+}
+.vertical_spacing{
+  padding: 10px;
+}
+.news-profile{
+  padding: 10px;
+}
+.sm-box-news {
+  width: 32%;
+  overflow: hidden;
+  float: left;
+  margin-right: 5px;
+  height: 17rem;
+  margin-bottom: 10px;
+}
+.a-box {
+  text-decoration: none;
+  display: block;
+  height: 100%;
+}
+.sug-title {
+  padding: 10px;
+}
+.sm-img{
+  overflow: hidden;
+}
+@media (max-width: 576px) {
+  .clx-flex{
+    flex-direction: column;
+    margin-top: 6px;
+  }
+  .team-profile-header{
+    margin-bottom: 6px;
+  }
+  .team-logo{
+    margin: 0 auto;
+    width: 60px;
+    height:60px;
+  }
+  .team-name {
+    font-size: 34px;
+    font-weight: 600;
+  }
+  .vertical_spacing{
+    padding: 2px;
+  }
+  .sm-box-news{
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 992px) {
+}
+
+@media (max-width: 1200px) {
+}

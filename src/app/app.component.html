@@ -1,0 +1,48 @@
+<ng-progress></ng-progress>
+<!--post maker opener for the mobile view-->
+<div *ngIf="isExpired" class="modal fade" id="postmakeropener" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Create Post</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <app-createpost></app-createpost>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Big opener for the Messaging view-->
+<div class="modal fade bd-example-modal-lg" id="messagingopener" tabindex="-1" role="dialog" aria-labelledby="messagingopener" aria-hidden="true">
+  <div *ngIf="messageModalOpener" class="modal-dialog modal-lg-customized">
+    <div style="padding: 10px;" class="modal-content ">
+      <app-messaging></app-messaging>
+    </div>
+  </div>
+</div>
+
+<div #notification class="fg-fixed">
+  <div class="container zin">
+    <div class="row">
+      <div class="col-xl-3"></div>
+      <div class="col-xl-6">
+        <div class="{{alertClass}}">
+          {{message}}
+        </div>
+      </div>
+      <div class="col-xl-3"></div>
+    </div>
+  </div>
+</div>
+<div (mouseleave)="disappear()" #floater class="card user_info_floater">
+  <app-floater></app-floater>
+</div>
+<app-header *ngIf="isExpired"></app-header>
+<div (window:scroll)="scrollerEv($event)" (window:resize)="resize($event)" class="route-container">
+  <router-outlet></router-outlet>
+</div>
+

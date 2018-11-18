@@ -1,0 +1,55 @@
+<div class="matches-ev">
+  <div *ngFor="let match of matches" class="matches-col">
+    <div class="match-block">
+      <div [title]="match.homeTeam[0].name" class="fl-mt-bl home-team">
+        <div class="home-name">
+          <span class="onMobileHide" [innerHtml]="generalFunction.shortenString(match.homeTeam[0].name , 18, true)"></span>
+          <span class="onMobileShow" [innerHtml]="generalFunction.shortenString(match.homeTeam[0].name , 10, true)"></span>
+        </div>
+        <div class="img-h">
+          <img [src]="'assets/'+match.homeTeam[0].img_path" alt="" class="hn-src img-fluid">
+        </div>
+      </div>
+      <div class="fl-mt-bl score">
+        <div class="sb-holder">
+          <ng-template [ngIf]="!match.isGameCanceled" [ngIfElse]="canceled">
+            <ng-template [ngIf] = "match.isGameFinished" [ngIfElse]="finished">
+              <div class="score-board">
+                <div class="sc-fl"><span>{{match.teamOneScore}}</span></div>
+                <div class="sc-fl"><span>:</span></div>
+                <div class="sc-fl"><span>{{match.teamTwoScore}}</span></div>
+              </div>
+            </ng-template>
+            <ng-template #finished>
+              <div class="time-line">
+                <div class="time">
+                  {{ match.matchDate | date: 'HH:mm' }}
+                </div>
+              </div>
+            </ng-template>
+          </ng-template>
+          <ng-template #canceled>
+            <div class="canceled-board">
+              <div>
+                <i title="This game has been canceled." class="fa fa-warning"></i>
+              </div>
+            </div>
+          </ng-template>
+
+        </div>
+      </div>
+      <div [title]="match.awayTeam[0].name" class="fl-mt-bl away-team">
+        <div class="away-name">
+          <span class="onMobileHide" [innerHtml]="generalFunction.shortenString(match.awayTeam[0].name, 18, true)"></span>
+          <span class="onMobileShow" [innerHtml]="generalFunction.shortenString(match.awayTeam[0].name, 10, true)"></span>
+        </div>
+        <div class="img-h">
+          <img [src]="'assets/'+match.awayTeam[0].img_path" alt="" class="hn-src img-fluid">
+        </div>
+      </div>
+      <!--<div>-->
+        <!--{{ match.matchDate | date: 'h:m' }}-->
+      <!--</div>-->
+    </div>
+  </div>
+</div>

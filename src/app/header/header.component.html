@@ -1,0 +1,101 @@
+<nav class="navbar navbar-expand-lg fg-shadow header-color">
+  <div class="container fg-container">
+    <a routerLink="/dashboard" class="navbar-brand cv fg-brand">Football Geek</a>
+    <a routerLink="/dashboard" class="navbar-brand mv fg-brand">FG</a>
+    <div class="mv btn-group-sm btn-group">
+      <button data-toggle="modal" data-target="#postmakeropener" class="btn-primary btn postmaker">
+        <i class="fa fa-edit"></i>
+      </button>
+      <button class="btn btn-primary navbar-toggler-right" type="button" data-toggle="dropdown">
+        <a>
+          <i style="color:white;" class="fa fa-bars"></i>
+        </a>
+      </button>
+      <div class="dropdown-menu line-height-back dropdown-menu-right" aria-labelledby="dropdownPremium">
+          <a class="dropdown-item prop" routerLink="profile/{{loggedInUserHeader?.username}}">
+            <div class="profile-pic">
+              <div class="inp">
+                <img [src]="loggedInUserHeader?.profile_pic_path" alt="">
+              </div>
+            </div>
+            <div class="name-and-username fg-container">
+              <div class="name">{{loggedInUserHeader?.name}}</div>
+              <div class="username">@{{loggedInUserHeader?.username}}</div>
+            </div>
+          </a>
+          <a data-toggle="modal" data-target="#messagingopener" style="cursor: pointer;" (click)="toggleMessageOpener()" class="dropdown-item">
+            <span>Messages</span>
+          </a>
+          <a class="dropdown-item" href="#">
+            <span>Notifications</span>
+          </a>
+          <a class="dropdown-item" href="#">
+            <span>Teams</span>
+          </a>
+          <a class="dropdown-item" href="#">
+            <span>Leagues</span>
+          </a>
+          <a class="dropdown-item" href="#">
+            <span>Create a Fan page</span>
+          </a>
+          <a class="dropdown-item" href="#">
+            <span>Settings</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <div class="dropdown-item" class="container-fluid">
+            <div style="cursor: pointer;" (click)="onLogout()" class="">Log out</div>
+          </div>
+        </div>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown">
+          <a style="cursor: pointer;" (click)="toggleMessageOpener()" class="nav-link" data-toggle="modal" data-target="#messagingopener">Messages</a>
+        </li>
+        <li class="nav-item" style="position: relative;">
+          <a class="nav-link" href="#" title="Bootstrap Code Snippets">Notifications</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link" href="#">World Cup</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav line-height-back">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="dropdownPremium" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-user"></i>
+            Profile</a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownPremium">
+            <a routerLink="profile/{{ loggedInUserHeader?.username }}" class="dropdown-item">
+              {{ loggedInUserHeader?.name }}
+              <span class='lg_username'>@{{ loggedInUserHeader?.username }}</span>
+            </a>
+            <a class="dropdown-item" href="#">
+              <span>Teams</span>
+            </a>
+            <a class="dropdown-item" href="#">
+              <span>Leagues</span>
+            </a>
+            <a class="dropdown-item" routerLink="/selectpagename">
+              <span>Create a Fan page</span>
+            </a>
+            <a class="dropdown-item" href="#">
+              <span>Settings</span>
+            </a>
+            <div class="dropdown-divider"></div>
+            <div class="dropdown-item" class="container-fluid">
+              <div style="cursor: pointer;" (click)="onLogout()" class="">Log out</div>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a data-toggle="tooltip" data-placement="bottom" data-title="Search" class="nav-link" routerLink="/search">
+            <i class="fa fa-search"></i>
+            <span class="d-lg-none">Search</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div style="margin-bottom: 0.2rem;"></div>

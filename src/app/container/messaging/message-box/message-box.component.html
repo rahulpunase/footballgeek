@@ -1,0 +1,61 @@
+<div #container class="message_box">
+  <div *ngIf="visibility" class="bi-container">
+    <div class="header">
+      <div class="pr_img">
+        <img [src]="messageTo?.profile_pic_path_50_50 === null? messageTo?.profile_pic_path : messageTo?.profile_pic_path_50_50" alt="">
+      </div>
+      <div class="name">
+        <span>{{ messageTo?.name }}</span>
+      </div>
+      <div class="username">
+        <span>{{ messageTo?.username }}</span>
+      </div>
+      <div class="availability">
+        {{availability}}
+      </div>
+    </div>
+    <div class="he-ms-border"></div>
+    <div class="all_msg" [ngStyle]="{'justify-content': completeMessagePack?.length === 0 ? 'center':'flex-end'}">
+      <div class="kld" id="kld" #scrollContainer>
+        <div *ngIf="completeMessagePack?.length === 0" class="noMes">
+          <div class="nomes-warning">
+            <h1><span class="war-n-mes">No messages yet</span></h1>
+          </div>
+        </div>
+        <div class="message_con">
+          <div class="{{ message.class.name }} mghls" *ngFor="let message of completeMessagePack">
+            <ng-template [ngIf] = "message.type === 'date'" [ngIfElse] = "mes">
+              <div class="date-holder">
+                <span class="dt">{{ message.date | date: 'MMMM dd, yyyy' }}</span>
+              </div>
+            </ng-template>
+            <ng-template #mes>
+              <div class="mhk">
+                <div class="messageBodyContent">
+                  <span>{{ message.messageBody }}</span>
+                </div>
+                <div class="messageTime">
+                  <span>{{ message.createAt | date: 'hh:mm a' }}</span>
+                </div>
+              </div>
+            </ng-template>
+            <div class="clear"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="norm_border">
+    </div>
+    <div class="input-box">
+      <div class="inp-holder">
+        <input (keydown)="inKeyDown()" (blur)="inBlur()" (focus)="inFocus()"  #messagebox autofocus autocomplete="off" [placeholder]="'Type your message here, ' + loggedInUser.name" type="text" class="glittered message-box">
+      </div>
+      <div class="otherStuff"></div>
+      <div class="send">
+        <button (click)="sendMessage(messagebox.value)" class="send-button btn btn-primary">
+          <span><i class="fa fa-send"></i></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

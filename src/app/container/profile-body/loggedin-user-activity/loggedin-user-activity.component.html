@@ -1,0 +1,69 @@
+<div *ngIf="activities.length > 0" class="list-group fg-my-list-group">
+  <div *ngFor="let act of activities" class="list-group-item activitytlist">
+    <!-- IF USER ACTIVITY IS LIKE -->
+    <div *ngIf="act.action.action === 'like'" class="act-user-like">
+      <div class="cont">
+        <div class="user-l opl" [ngStyle]="{ 'width' : (act.action.post.isImageContains) ? '45%': '74%' }">
+          <a #floaterlink (mouseout)="stopProcess()" (click)="stopProcess()" (mouseover)="createAvatarInfoContainer(loggedInUser._id, floaterlink)"
+            routerLink="/profile/{{loggedInUser.username}}" class="href">
+            {{ loggedInUser.name }}
+          </a>
+          <span class="rst"> liked <span><i></i></span> </span>
+          <a #floaterlink1 (mouseout)="stopProcess()" (click)="stopProcess()" (mouseover)="createAvatarInfoContainer(act.action.post.createdBy_id, floaterlink1)"
+            routerLink="/profile/{{act.action.post.createdByUsername}}" class="href">{{ act.action.post.createdByName
+            }} @{{ act.action.post.createdByUsername }}</a>
+          <span class="rst">'s <a routerLink="/dashboard/posts/{{ act.action.post._id }}">post</a>. </span>
+        </div>
+        <div class="post-wh-liked opl_4">
+          <div *ngIf="act.action.post.isImageContains" class="isImage">
+            <div class="carry-img">
+              <img class="cr-sl" [src]="domain + '/' + act.action.post.postImagePath" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="time lpd">
+          <span class="tm">{{ act.createdAt | date: 'dd, MMMM' }} at {{ act.createdAt | date: 'hh:mm a' }}</span>
+        </div>
+        <div class="st" style="clear: both;"></div>
+      </div>
+      <div class="post-content">
+        <span class="pst-con" [innerHTML]="act.action.post.content"></span>
+      </div>
+    </div>
+    <!-- IF USER ACTIVITY IS followuser -->
+    <div *ngIf="act.action.action === 'follow'" class="act-follow">
+      <div class="cont">
+        <div class="started-com">
+          <a #floaterlink (mouseout)="stopProcess()" (click)="stopProcess()" (mouseover)="createAvatarInfoContainer(loggedInUser._id, floaterlink)"
+            routerLink="/profile/{{loggedInUser.username}}" class="href">
+            {{ loggedInUser.name }}
+          </a>
+          <span class="rst"> started following </span>
+          <a #floaterlink1 (mouseout)="stopProcess()" (click)="stopProcess()" (mouseover)="createAvatarInfoContainer(act.action.userFollow._id, floaterlink1)"
+            routerLink="/profile/{{act.action.userFollow.username}}" class="href">{{ act.action.userFollow.name
+            }} @{{ act.action.userFollow.username }}</a>
+        </div>
+        <div class="time lpd">
+          <span class="tm">{{ act.createdAt | date: 'dd, MMMM' }} at {{ act.createdAt | date: 'hh:mm a' }}</span>
+        </div>
+        <div class="st" style="clear: both;"></div>
+      </div>
+    </div>
+    <!-- IF USER ACTIVITY IS POSTADDED-->
+    <div *ngIf="act.action.action === 'postadded'" class="post-added">
+      <div class="cont">
+        <div class="started-com">
+          <a #floaterlink (mouseout)="stopProcess()" (click)="stopProcess()" (mouseover)="createAvatarInfoContainer(loggedInUser._id, floaterlink)"
+            routerLink="/profile/{{loggedInUser.username}}" class="href">
+            {{ loggedInUser.name }}
+          </a>
+          <span class="rst"> added a post.</span>
+        </div>
+        <div class="time lpd">
+          <span class="tm">{{ act.createdAt | date: 'dd, MMMM' }} at {{ act.createdAt | date: 'hh:mm a' }}</span>
+        </div>
+        <div class="st" style="clear: both;"></div>
+      </div>
+    </div>
+  </div>
+</div>

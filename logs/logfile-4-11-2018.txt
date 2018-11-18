@@ -1,0 +1,124 @@
+14:58:42:=>varunbasedia logged in successfully with token::=>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1YmJiN2M4YmYzNzljNzI4NTBkNjU2MjkiLCJpYXQiOjE1NDEzMjM3MjIsImV4cCI6MTU0MTQxMDEyMn0.km6RbLF51N1M0yeQR7G-7CnO9Mz44brlLo3SDb-coM4
+14:58:43:=>/profile
+14:58:43:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+15:0:33:=>/whoseprofile/varunbasedia
+15:0:33:=>DATA SENT TO CLIENT SUCCESSFULLY
+15:1:08:=>/profile
+15:1:08:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+15:2:01:=>/profile
+15:2:04:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+15:11:03:=>/profile
+15:11:03:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+15:11:37:=>Telecasted userinfo for 5bbb7c8bf379c72850d65629
+15:12:33:=>Account created
+15:12:33:=>of luizsuarez9
+15:12:41:=>luizsuarez9 logged in successfully with token::=>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1YmRlYmYwOWYyNWNmNDMyMDRhNWI5NjQiLCJpYXQiOjE1NDEzMjQ1NjEsImV4cCI6MTU0MTQxMDk2MX0.T8hoQIuBgG3wMod7gpV_aB2_S-kAgT3PtM4A3kJcb_M
+15:12:42:=>/profile
+15:12:42:=>profile Data fetched for 5bdebf09f25cf43204a5b964
+15:13:20:=>Telecasted userinfo for 5bbb7c8bf379c72850d65629
+15:13:23:=>/profile
+15:13:23:=>profile Data fetched for 5bdebf09f25cf43204a5b964
+15:13:39:=>Telecasted userinfo for 5bbb7c8bf379c72850d65629
+15:13:48:=>Telecasted userinfo for 5bbb7c8bf379c72850d65629
+15:13:57:=>Telecasted userinfo for 5b994108419c35256435c183
+15:14:04:=>Telecasted userinfo for 5bbb7c8bf379c72850d65629
+15:14:06:=>Telecasted userinfo for 5b994108419c35256435c183
+15:14:11:=>Telecasted userinfo for 5bd202072cf8952ed01073e8
+15:14:13:=>/profile
+15:14:13:=>profile Data fetched for 5bdebf09f25cf43204a5b964
+15:14:16:=>Telecasted userinfo for 5bd202072cf8952ed01073e8
+15:14:19:=>Telecasted userinfo for 5bd202072cf8952ed01073e8
+15:14:47:=>Telecasted userinfo for 5b994108419c35256435c183
+15:14:49:=>Telecasted userinfo for 5b994108419c35256435c183
+15:15:09:=>varunbasedia logged in successfully with token::=>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1YmJiN2M4YmYzNzljNzI4NTBkNjU2MjkiLCJpYXQiOjE1NDEzMjQ3MDksImV4cCI6MTU0MTQxMTEwOX0.AVew29Tzi3jtbn_1TjNGk3h_OBv5NBzU88exy5_pnds
+15:15:10:=>/profile
+15:15:10:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+15:15:16:=>/profile
+15:15:16:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+15:15:24:=>Telecasted userinfo for 5bdebf09f25cf43204a5b964
+15:15:28:=>Telecasted userinfo for 5bdebf09f25cf43204a5b964
+15:15:38:=>/profile
+15:15:38:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+15:15:44:=>/profile
+15:15:44:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+15:15:46:=>Telecasted userinfo for 5bdebf09f25cf43204a5b964
+15:16:00:=>luizsuarez9 logged in successfully with token::=>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1YmRlYmYwOWYyNWNmNDMyMDRhNWI5NjQiLCJpYXQiOjE1NDEzMjQ3NjAsImV4cCI6MTU0MTQxMTE2MH0.zmtyWJpTDv4JBifATdhgcEnowMIdAkbiOpZavh8VNww
+15:16:01:=>/profile
+15:16:01:=>profile Data fetched for 5bdebf09f25cf43204a5b964
+15:20:24:=>/profile
+15:20:24:=>profile Data fetched for 5bdebf09f25cf43204a5b964
+15:20:37:=>/profile
+15:20:38:=>profile Data fetched for 5bdebf09f25cf43204a5b964
+15:20:43:=>/whoseprofile/luizsuarez9
+15:20:43:=>DATA SENT TO CLIENT SUCCESSFULLY
+15:21:23:=>/saveeditedprofile
+15:21:23:=>DATA SENT TO CLIENT SUCCESSFULLY
+15:21:23:=>/profile
+15:21:23:=>profile Data fetched for 5bdebf09f25cf43204a5b964
+15:21:55:=>/profile
+15:21:55:=>/whoseprofile/luizsuarez9
+15:21:55:=>DATA SENT TO CLIENT SUCCESSFULLY
+15:21:55:=>profile Data fetched for 5bdebf09f25cf43204a5b964
+15:22:26:=>/saveeditedwall
+15:22:26:=>/profile
+15:22:26:=>profile Data fetched for 5bdebf09f25cf43204a5b964
+15:22:36:=>/saveeditedprofile
+15:22:36:=>DATA SENT TO CLIENT SUCCESSFULLY
+15:22:36:=>/profile
+15:22:36:=>profile Data fetched for 5bdebf09f25cf43204a5b964
+15:22:52:=>Telecasted userinfo for 5bbb7c8bf379c72850d65629
+15:22:56:=>Telecasted userinfo for 5bd202072cf8952ed01073e8
+15:23:45:=>Telecasted userinfo for 5bdebf09f25cf43204a5b964
+15:23:58:=>varunbasedia logged in successfully with token::=>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1YmJiN2M4YmYzNzljNzI4NTBkNjU2MjkiLCJpYXQiOjE1NDEzMjUyMzgsImV4cCI6MTU0MTQxMTYzOH0.Y28VItlFPpJsKN0FVec-TIazrVEJgXEtQ2hhuSZkg_A
+15:23:59:=>/profile
+15:23:59:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+15:24:51:=>INTERNAL SERVER ERROR, STATUS CODE: 500
+    at searchRequest (E:\football_geek\football\server\controllers\controller.general.js:290:35)
+SyntaxError: Invalid regular expression: /[/: Unterminated character class
+    at next (E:\football_geek\football\node_modules\express\lib\router\route.js:137:13)
+    at new RegExp (<anonymous>)
+    at jwt.verify (E:\football_geek\football\server\middlewares\middle.container.js:21:21)
+    at E:\football_geek\football\node_modules\jsonwebtoken\verify.js:196:12
+    at Layer.handle [as handle_request] (E:\football_geek\football\node_modules\express\lib\router\layer.js:95:5)
+    at Object.module.exports [as verify] (E:\football_geek\football\node_modules\jsonwebtoken\verify.js:80:10)
+    at Layer.handle [as handle_request] (E:\football_geek\football\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\football_geek\football\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (E:\football_geek\football\node_modules\express\lib\router\route.js:112:3)
+    at E:\football_geek\football\node_modules\express\lib\router\index.js:281:22
+    at Layer.handle [as handle_request] (E:\football_geek\football\node_modules\express\lib\router\layer.js:95:5)
+    at Function.process_params (E:\football_geek\football\node_modules\express\lib\router\index.js:335:12)
+    at next (E:\football_geek\football\node_modules\express\lib\router\index.js:275:10)
+    at router (E:\football_geek\football\node_modules\express\lib\router\index.js:47:12)
+    at Function.handle (E:\football_geek\football\node_modules\express\lib\router\index.js:174:3)
+    at E:\football_geek\football\node_modules\express\lib\router\index.js:284:7
+    at Layer.handle [as handle_request] (E:\football_geek\football\node_modules\express\lib\router\layer.js:95:5)
+    at Function.process_params (E:\football_geek\football\node_modules\express\lib\router\index.js:335:12)
+    at trim_prefix (E:\football_geek\football\node_modules\express\lib\router\index.js:317:13)
+    at getSecret (E:\football_geek\football\node_modules\jsonwebtoken\verify.js:76:14)
+    at jwtTokenByPasser (E:\football_geek\football\server\middlewares\middle.container.js:12:17)
+15:25:18:=>INTERNAL SERVER ERROR, STATUS CODE: 500
+Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+    at new ObjectID (E:\football_geek\football\node_modules\mongodb-core\node_modules\bson\lib\bson\objectid.js:57:11)
+    at ObjectID [as ObjectId] (E:\football_geek\football\node_modules\mongodb-core\node_modules\bson\lib\bson\objectid.js:38:43)
+    at getTeamMetaData (E:\football_geek\football\server\controllers\controller.general.js:236:49)
+    at Layer.handle [as handle_request] (E:\football_geek\football\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\football_geek\football\node_modules\express\lib\router\route.js:137:13)
+    at jwt.verify (E:\football_geek\football\server\middlewares\middle.container.js:21:21)
+    at E:\football_geek\football\node_modules\jsonwebtoken\verify.js:196:12
+    at getSecret (E:\football_geek\football\node_modules\jsonwebtoken\verify.js:76:14)
+    at Object.module.exports [as verify] (E:\football_geek\football\node_modules\jsonwebtoken\verify.js:80:10)
+    at jwtTokenByPasser (E:\football_geek\football\server\middlewares\middle.container.js:12:17)
+    at Layer.handle [as handle_request] (E:\football_geek\football\node_modules\express\lib\router\layer.js:95:5)
+    at Route.dispatch (E:\football_geek\football\node_modules\express\lib\router\route.js:112:3)
+    at next (E:\football_geek\football\node_modules\express\lib\router\route.js:137:13)
+    at Layer.handle [as handle_request] (E:\football_geek\football\node_modules\express\lib\router\layer.js:95:5)
+    at param (E:\football_geek\football\node_modules\express\lib\router\index.js:354:14)
+    at param (E:\football_geek\football\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (E:\football_geek\football\node_modules\express\lib\router\index.js:410:3)
+    at next (E:\football_geek\football\node_modules\express\lib\router\index.js:275:10)
+    at router (E:\football_geek\football\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (E:\football_geek\football\node_modules\express\lib\router\layer.js:95:5)
+    at E:\football_geek\football\node_modules\express\lib\router\index.js:281:22
+    at Function.handle (E:\football_geek\football\node_modules\express\lib\router\index.js:174:3)
+15:25:18:=>/profile
+15:25:18:=>profile Data fetched for 5bbb7c8bf379c72850d65629

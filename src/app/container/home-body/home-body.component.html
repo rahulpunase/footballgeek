@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xl-3 onMobile">
+      <div #scFix2 class="on-sc-fix">
+        <app-side-bar *ngIf="resizeData.DEVICE"></app-side-bar>
+      </div>
+    </div>
+    <div class="col-xl-6 mobile_view_container">
+      <ul class="nav nav-tabs fg_global_tabs">
+        <a routerLinkActive="active" class="nav-item nav-link fg_global_tab-item-links" routerLink="posts">
+          <i class="fa fa-pencil"></i><span class="onMobile">&nbsp;Posts</span></a>
+        <a routerLinkActive="active" class="nav-item nav-link fg_global_tab-item-links" routerLink="news">
+          <i class="fa fa-newspaper-o"></i><span class="onMobile">&nbsp;News</span></a>
+        <a routerLinkActive="active" class="nav-item nav-link fg_global_tab-item-links" routerLink="events">
+          <i class="fa fa-television"></i><span class="onMobile">&nbsp;Events</span></a>
+        <!-- <a>Menu 3</a> -->
+      </ul>
+      <div class="">
+        <div class="no_pad">
+          <div class="route-container">
+            <router-outlet></router-outlet>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-3 onMobile">
+      <div #scFix1 class="on-sc-fix">
+        <app-createpost *ngIf="resizeData.DEVICE"></app-createpost>
+        <app-newsapi *ngIf="resizeData.DEVICE"></app-newsapi>
+      </div>
+    </div>
+  </div>
+</div>

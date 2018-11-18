@@ -1,0 +1,26 @@
+<div class="conversations">
+  <ul class="list-group">
+    <li (click) = openConversationForPeople(conversation.cWU._id) class="list-group-item" *ngFor="let conversation of conversations;">
+      <div class="all_cem-holder">
+        <div class="pr_img">
+          <img [src]="conversation.cWU.profile_pic_path_50_50 === null? conversation.cWU.profile_pic_path : conversation.cWU.profile_pic_path_50_50" alt="">
+        </div>
+        <div class="mAndName">
+          <div class="info-h">
+            <div class="name">
+              <span>{{ conversation.cWU.name }}</span>
+            </div>
+            <div class="username">
+              <a [attr.data-floater]="conversation._id" (mouseout)="stopProcess()" (click)="stopProcess()" (mouseover)="createAvatarInfoContainer(conversation.cWU._id, floaterLink)" #floaterLink routerLink="/profile/{{conversation.cWU.username}}">@{{conversation.cWU.username}}</a>
+            </div>
+          </div>
+          <div class="last_message">
+            <span>
+              {{ conversation.lastMessages[0].messageBody }}
+            </span>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>

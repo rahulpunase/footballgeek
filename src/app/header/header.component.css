@@ -1,0 +1,70 @@
+.fg-brand{
+    font-weight: bolder;
+}
+.fg-shadow{
+    box-shadow: 0 0 8px 0 rgba(0,0,0,0.5);
+}
+.lg_username{
+  padding-left: 1em;
+}
+.prop{
+  display: flex;
+}
+.inp {
+  height: 30px;
+  border-radius: 4px;
+  width: 30px;
+  overflow: hidden;
+}
+.profile-pic {
+  margin-right: 10px;
+}
+.username {
+  font-size: 14px;
+  font-weight: bold;
+}
+.fg-container{
+  line-height: 1 !important;
+}
+.line-height-back{
+  line-height: 1.5 !important;
+}
+.inp img{
+  width: 100%;
+  height: 100%;
+}
+.cv{
+  display: block;
+}
+.mv{
+  display: none;
+}
+@media (min-width: 1200px){
+    .fg-container{
+        /*max-width: 1200px !important;*/
+    }
+}
+
+@media (max-width: 576px) {
+  .cv{
+    display: none;
+  }
+  .mv{
+    display: block;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+ }
+
+
+@media (max-width: 992px) {
+
+ }
+
+
+@media (max-width: 1200px) {
+
+ }

@@ -1,0 +1,21 @@
+.margin{
+  margin-bottom: 0.9rem;
+}
+.newsbottom{
+  display: flex;
+  flex-flow: column;
+  flex-direction: row;
+  padding: 0.2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.newslist:first-child{
+  border-top-left-radius: 0rem !important;
+  border-top-right-radius: 0rem !important;
+}
+
+.newsbottom > div{
+  width: 100%;
+  text-align: center;
+}

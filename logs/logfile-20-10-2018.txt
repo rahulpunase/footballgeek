@@ -1,0 +1,211 @@
+11:5:53:=>Logging in with google id...
+11:5:53:=> logged in successfully with token #GOOGLEUSER::=>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1Yjk5NDEwODQxOWMzNTI1NjQzNWMxODMiLCJpYXQiOjE1NDAwMTM3NTMsImV4cCI6MTU0MDEwMDE1M30.arRQI135Acp392eE0IJ02_RBQf0oC_b3j_fUhvpUB0c
+11:5:53:=>/profile
+11:5:53:=>profile Data fetched for 5b994108419c35256435c183
+11:6:31:=>varunbasedia logged in successfully with token::=>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1YmJiN2M4YmYzNzljNzI4NTBkNjU2MjkiLCJpYXQiOjE1NDAwMTM3OTEsImV4cCI6MTU0MDEwMDE5MX0.o1o4j6qckCxpRsYoD-6wooI9pxmTptcwX2RxMRx-YY4
+11:6:32:=>/profile
+11:6:32:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+11:32:45:=>INTERNAL SERVER ERROR, STATUS CODE: 500
+Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+    at getPageInfoFromId (E:\football_geek\football\server\controllers\controller.page.js:93:33)
+    at Layer.handle [as handle_request] (E:\football_geek\football\node_modules\express\lib\router\layer.js:95:5)
+    at new ObjectID (E:\football_geek\football\node_modules\mongodb-core\node_modules\bson\lib\bson\objectid.js:57:11)
+    at ObjectID [as ObjectId] (E:\football_geek\football\node_modules\mongodb-core\node_modules\bson\lib\bson\objectid.js:38:43)
+    at jwt.verify (E:\football_geek\football\server\middlewares\middle.container.js:21:21)
+    at getSecret (E:\football_geek\football\node_modules\jsonwebtoken\verify.js:76:14)
+    at jwtTokenByPasser (E:\football_geek\football\server\middlewares\middle.container.js:12:17)
+    at Object.module.exports [as verify] (E:\football_geek\football\node_modules\jsonwebtoken\verify.js:80:10)
+    at Layer.handle [as handle_request] (E:\football_geek\football\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\football_geek\football\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (E:\football_geek\football\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (E:\football_geek\football\node_modules\express\lib\router\layer.js:95:5)
+    at E:\football_geek\football\node_modules\express\lib\router\index.js:281:22
+    at param (E:\football_geek\football\node_modules\express\lib\router\index.js:354:14)
+    at next (E:\football_geek\football\node_modules\express\lib\router\route.js:137:13)
+    at Function.process_params (E:\football_geek\football\node_modules\express\lib\router\index.js:410:3)
+    at next (E:\football_geek\football\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (E:\football_geek\football\node_modules\express\lib\router\index.js:174:3)
+    at router (E:\football_geek\football\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (E:\football_geek\football\node_modules\express\lib\router\layer.js:95:5)
+11:32:45:=>/profile
+    at E:\football_geek\football\node_modules\jsonwebtoken\verify.js:196:12
+    at param (E:\football_geek\football\node_modules\express\lib\router\index.js:365:14)
+11:32:45:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+11:33:27:=>/profile
+11:33:27:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+11:34:06:=>varunbasedia logged in successfully with token::=>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1YmJiN2M4YmYzNzljNzI4NTBkNjU2MjkiLCJpYXQiOjE1NDAwMTU0NDYsImV4cCI6MTU0MDEwMTg0Nn0.wwPxqA6G5E0gDPUZJ53f9dXVtXTx6xnWpLDpphperjI
+11:34:07:=>/profile
+11:34:07:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+11:34:21:=>Logging in with google id...
+11:34:21:=> logged in successfully with token #GOOGLEUSER::=>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1Yjk5NDEwODQxOWMzNTI1NjQzNWMxODMiLCJpYXQiOjE1NDAwMTU0NjEsImV4cCI6MTU0MDEwMTg2MX0.JAB8icIJngB_g9GrBnQSrwGK8Wt9R5xASV6var8ZfB4
+11:34:21:=>/profile
+11:34:21:=>profile Data fetched for 5b994108419c35256435c183
+11:34:34:=>/profile
+11:34:34:=>profile Data fetched for 5b994108419c35256435c183
+11:36:20:=>/profile
+11:36:21:=>profile Data fetched for 5b994108419c35256435c183
+11:43:04:=>/profile
+11:43:04:=>profile Data fetched for 5b994108419c35256435c183
+11:45:51:=>/profile
+11:45:51:=>profile Data fetched for 5b994108419c35256435c183
+11:46:06:=>/profile
+11:46:06:=>profile Data fetched for 5b994108419c35256435c183
+11:46:52:=>/profile
+11:46:52:=>profile Data fetched for 5b994108419c35256435c183
+11:48:14:=>/profile
+11:48:14:=>profile Data fetched for 5b994108419c35256435c183
+11:50:02:=>/profile
+11:50:02:=>profile Data fetched for 5b994108419c35256435c183
+11:50:33:=>/profile
+11:50:33:=>profile Data fetched for 5b994108419c35256435c183
+11:50:44:=>varunbasedia logged in successfully with token::=>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1YmJiN2M4YmYzNzljNzI4NTBkNjU2MjkiLCJpYXQiOjE1NDAwMTY0NDQsImV4cCI6MTU0MDEwMjg0NH0.tDvC1h4wksfmWKnEOF5BKQRpsztXhF1Uwtj7jzw6g_s
+11:50:45:=>/profile
+11:50:45:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+11:51:33:=>/profile
+11:51:33:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+11:52:29:=>/profile
+11:52:29:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+11:52:33:=>/profile
+11:52:33:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+11:54:06:=>Telecasted userinfo for 5bbb7c8bf379c72850d65629
+12:8:06:=>/profile
+12:8:06:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+12:9:34:=>/profile
+12:9:34:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+12:9:45:=>/profile
+12:9:45:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+12:10:03:=>/profile
+12:10:03:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+12:14:50:=>/profile
+12:14:50:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+12:17:35:=>/profile
+12:17:35:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+12:21:19:=>/profile
+12:21:19:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+12:24:31:=>/profile
+12:24:32:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+12:24:59:=>/profile
+12:24:59:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+12:28:25:=>/profile
+12:28:25:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+12:30:02:=>/profile
+12:30:02:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+12:30:53:=>/profile
+12:30:53:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+12:31:06:=>/profile
+12:31:06:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+12:33:21:=>/profile
+12:33:21:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+12:34:26:=>/profile
+12:34:27:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+14:24:11:=>varunbasedia logged in successfully with token::=>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1YmJiN2M4YmYzNzljNzI4NTBkNjU2MjkiLCJpYXQiOjE1NDAwMjU2NTEsImV4cCI6MTU0MDExMjA1MX0.74hKci6EQwT-FcT7po9iG-Hu5lw5llMI8aCzUtK4MFk
+14:24:13:=>/profile
+14:24:13:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+20:27:18:=>/profile
+20:27:18:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+20:33:16:=>/profile
+20:33:18:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+20:35:53:=>/profile
+20:35:53:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+20:36:58:=>/profile
+20:36:58:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+20:37:35:=>/profile
+20:37:35:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+20:40:10:=>/profile
+20:40:10:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+20:41:30:=>/profile
+20:41:30:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+20:49:37:=>/profile
+20:49:37:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+20:50:38:=>/profile
+20:50:38:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+20:55:40:=>/profile
+20:55:40:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+20:57:35:=>/profile
+20:57:35:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+21:1:35:=>/profile
+21:1:35:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+21:2:25:=>/profile
+21:2:25:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+21:6:03:=>/profile
+21:6:03:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+21:7:23:=>/profile
+21:7:23:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+21:7:59:=>/profile
+21:7:59:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+21:8:11:=>/profile
+21:8:11:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+21:11:16:=>/profile
+21:11:16:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+21:12:46:=>/profile
+21:12:46:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+21:13:47:=>/profile
+21:13:47:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+21:15:12:=>/profile
+21:15:12:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+21:17:16:=>/profile
+21:17:16:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+21:18:24:=>/profile
+21:18:24:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+21:20:56:=>/profile
+21:20:56:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+21:26:04:=>/profile
+21:26:04:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+21:27:52:=>/profile
+21:27:52:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+21:29:07:=>/profile
+21:29:07:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+21:29:38:=>/profile
+21:29:38:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+21:30:16:=>/profile
+21:30:16:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+21:30:31:=>/profile
+21:30:31:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+21:32:58:=>/profile
+21:32:58:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+21:33:25:=>/profile
+21:33:25:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+21:37:42:=>/profile
+21:37:42:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+21:40:12:=>/profile
+21:40:12:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+21:44:15:=>/profile
+21:44:15:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+21:53:17:=>/profile
+21:53:17:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+21:54:08:=>/profile
+21:54:08:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+21:57:32:=>/profile
+21:57:32:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+21:58:54:=>/profile
+21:58:54:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+22:0:50:=>/profile
+22:0:50:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+22:3:17:=>/profile
+22:3:17:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+22:10:02:=>/profile
+22:10:02:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+22:13:37:=>/profile
+22:13:37:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+22:14:33:=>/profile
+22:14:33:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+22:16:37:=>/profile
+22:16:37:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+22:17:49:=>/profile
+22:17:49:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+22:22:44:=>/profile
+22:22:44:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+22:25:40:=>/profile
+22:25:40:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+22:32:01:=>/profile
+22:32:01:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+22:33:54:=>/profile
+22:33:54:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+22:37:13:=>/profile
+22:37:13:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+22:38:47:=>/profile
+22:38:47:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+22:40:25:=>/profile
+22:40:25:=>profile Data fetched for 5bbb7c8bf379c72850d65629
+22:40:56:=>/profile
+22:40:56:=>profile Data fetched for 5bbb7c8bf379c72850d65629

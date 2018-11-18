@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="fr_js/jquery.min.js"></script>
+  <link rel="stylesheet" href="fr_css/bootstrap.css">
+  <style>
+    .ms-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .ms-selectable,
+    .ms-selection {
+      height: 400px;
+      overflow-y: scroll;
+      width: 50%;
+    }
+  </style>
+  <title>Document</title>
+  <style>
+    .hide {
+      display: none;
+    }
+  </style>
+  <script src="fr_js/jquery.multi-select.js"></script>
+  <script src="fr_js/news.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-4"></div>
+      <div class="col-xl-4">
+        <h1>Insert news Here</h1>
+        <div class="alert hide" id="alert"></div>
+        <form id="newsform" enctype="multipart/form-data" action="/framework/insertnews" method="POST" class="newsform">
+          <div class="form-group">
+            <label for="">Title</label>
+            <input autocomplete="off" id="title" name="title" type="text" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="">Heading</label>
+            <input autocomplete="off" id="heading" name="heading" type="text" class="form-control">
+          </div>
+          <div id="parastoappend" class="form-group">
+            <label for="">Content</label>
+            <small>And more input to add paragraphs</small>
+            <input autocomplete="off" name="para[0]" type="text" class="form-control">
+          </div>
+          <div class="form-group">
+            <button type="button" id="addParas" class="btn btn-primary">Add Paragraphs</button>
+          </div>
+          <div class="form-group">
+            <label for="">Select Picture</label>
+            <input autocomplete="off" accept="" id="newsfile" name="newsfile" type="file" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="">Select associated Club for the news</label>
+            <select multiple="multiple" name="associatedClubs[]" id="associatedClubs">
+              <option value="">Select</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="">Select associated League for the news</label>
+            <select multiple="multiple" name="associatedLeagues[]" id="associatedLeague">
+              <option value="">Select</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <button type="submit">Submit news</button>
+          </div>
+        </form>
+      </div>
+      <div class="col-xl-4"></div>
+    </div>
+  </div>
+</body>
+<script>
+  $(function () {
+    const $addParas = $("#addParas");
+    const $parastoappend = $("#parastoappend");
+    const $newsform = $("#newsform");
+    const $alert = $("#alert");
+    let parano = 1;
+    $addParas.click(function () {
+      $parastoappend.append(
+        `<input type="text" name="para[${parano}]" class="form-control">`
+      );
+      parano++;
+    });
+
+    $newsform.submit(function (e) {
+    })
+
+  });
+  $("document").ready(function () {
+    getAllTeams();
+    getAllLeagues();
+  });
+</script>
+
+</html>

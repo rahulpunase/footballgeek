@@ -1,0 +1,125 @@
+.side-bar-container {
+  background: #32383e;
+  padding: 0.2rem;
+  box-sizing: border-box;
+  min-height: 600px;
+}
+.avatar {
+  /*height: 260px;*/
+}
+.avilink {
+  text-align: center;
+}
+.side-teams{
+  margin-top: 16px;
+}
+.wa {
+  height: 90px;
+  background-color: #202327;
+}
+.list-parent {
+  display: flex;
+}
+.pil-img {
+  height: 25px;
+  width: 25px;
+}
+.cla-name {
+  padding-left: 10px;
+}
+img.ol-so {
+  width: 100%;
+  height: 100%;
+}
+.bpj {
+  width: 80px;
+  height: 80px;
+  margin-top: -50px;
+  margin-bottom: 5px;
+  border: 3px solid #32383e;
+  background: #272b30;
+  cursor: pointer;
+  display: block;
+  border-radius: 100%;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+}
+.thumbnail-container {
+  /* height: 170px; */
+  margin-top: 0.5rem;
+  overflow: hidden;
+}
+.av_link {
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.button_to_cancel {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  background-color: transparent;
+  right: 0.8rem;
+  top: 0.2rem;
+}
+.row_av_1{
+  display: flex;
+  justify-content: space-between;
+}
+.selected{
+  background: #202327;
+}
+.av_on_select {
+  padding: 10px;
+  border-radius:4px;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+}
+.av_on_select:hover{
+  border: 1px solid #202327;
+  cursor: pointer;
+}
+img.small-loader {
+  margin: 0 auto;
+  display: block;
+  height: 40px;
+  width: 40px;
+}
+.loader {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.df_av_select{
+  width: 100%;
+  height: 100%;
+}
+.resetimage {
+  height: 9px;
+  width: 9px;
+}
+.userdetail{
+  display: flex;
+  justify-content: space-around;
+}
+.ud-child{
+  flex: 0.33;
+  text-align: center;
+}
+.un-username {
+  margin-bottom: 8px;
+  margin-top: -6px;
+}
+.verified_mark{
+     /* height: 16px; */
+     width: 16px;
+     font-size: 18px;
+     position: absolute;
+     background: transparent;
+     margin-top: -36px;
+     margin-left: 157px;
+     /* border-radius: 100%; */
+     /* border: 2px solid #32383e; */
+     /* box-shadow: 0 1px 1px rgba(0,0,0,0.5); */
+}
+
